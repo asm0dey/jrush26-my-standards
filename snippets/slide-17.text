@@ -1,0 +1,9 @@
+what it is     Intent Integrity Kit — intent locked before code
+the artifacts  constitution, spec.md, plan.md, tasks.md,
+               contracts/, checklists/, .feature files
+how it runs    constitution -> specify -> clarify -> plan ->
+               checklist -> testify -> tasks -> analyze -> implement
+what it locks  the .feature files, hashed before implementation:
+               the agent may rewrite code, never what passing means
+installed as   tessl-labs/intent-integrity-kit 2.1.0
+link           github.com/intent-integrity-chain/kit

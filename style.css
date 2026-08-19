@@ -1,0 +1,120 @@
+/* Deck-wide type. Statement slides carry the talk; artifacts carry the proof. */
+.slidev-layout { --ink: #16161a; }
+
+.statement {
+  font-size: 2.6rem;
+  line-height: 1.18;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.statement.small { font-size: 1.9rem; }
+.statement .vnote { display: none; }
+
+.chapter .numeral {
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 1;
+  opacity: 0.14;
+  letter-spacing: -0.04em;
+}
+.chapter h1 { font-size: 2.4rem; margin-top: -1.2rem; }
+
+.artifact .eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.5;
+  margin-bottom: 0.6rem;
+}
+.artifact .caption {
+  margin-top: 0.9rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Visible until the real screenshot lands — never ship a talk with these on screen. */
+.ph {
+  border: 2px dashed currentColor;
+  border-radius: 0.5rem;
+  opacity: 0.55;
+  padding: 1.2rem 1.4rem;
+  height: 19rem;
+  max-height: 19rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+.ph-tag { font-family: JetBrains Mono, ui-monospace, monospace; font-size: 0.95rem; font-weight: 700; }
+.ph-desc { font-size: 0.95rem; line-height: 1.45; max-width: 46rem; }
+
+.byline { margin-top: 2rem; font-size: 0.85rem; opacity: 0.55; }
+
+.tiles .row { display: flex; gap: 1.4rem; justify-content: center; margin-bottom: 2rem; }
+.tiles .tile {
+  width: 5.5rem; height: 5.5rem;
+  display: grid; place-items: center;
+  border: 2px solid currentColor; border-radius: 0.6rem;
+  font-size: 2rem; font-weight: 700; opacity: 0.35;
+}
+.tiles .tile.keep { opacity: 1; }
+.tiles .cap { font-size: 1.6rem; font-weight: 600; }
+.tiles .cap.dropped { opacity: 0.6; }
+.tiles .cap { text-align: center; }
+
+.artifact .filepath {
+  font-family: JetBrains Mono, ui-monospace, monospace;
+  font-size: 0.68rem;
+  opacity: 0.45;
+  margin-bottom: 0.35rem;
+}
+.artifact .slidev-code { font-size: 0.72rem; line-height: 1.5; }
+
+.bio { font-size: 1.15rem; line-height: 1.6; opacity: 0.85; font-weight: 400; }
+.bio .vnote { display: none; }
+.artifact .slidev-code code { white-space: pre-wrap; }
+
+.artifact .shot {
+  width: 100%;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Artifact slides: the file on the left, the claim it supports on the right. */
+.artifact .slidev-layout, .artifact { padding-top: 2.2rem; }
+.artifact .claim {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.35;
+  padding-right: 1.6rem;
+  text-wrap: balance;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.artifact .claim .sub {
+  font-size: 0.95rem;
+  font-weight: 400;
+  opacity: 0.65;
+  margin-top: 0.9rem;
+}
+.artifact .code.dense .slidev-code { font-size: 0.58rem; line-height: 1.35; }
+.artifact .filepath.dense { font-size: 0.6rem; }
+
+/* Artifact slides read claim-then-proof, so the proof column gets the width. */
+.slidev-layout.two-columns.grid-cols-2 { grid-template-columns: 2fr 3fr; }
+.two-columns > * { align-self: center; }
+
+/* Chapter cards name the tooling the attempt ran on, quietly under the title. */
+.chapter .toolref {
+  font-family: JetBrains Mono, ui-monospace, monospace;
+  font-size: 0.85rem;
+  opacity: 0.55;
+  margin-top: 0.5rem;
+}
+.chapter .toolref:first-of-type { margin-top: 1.4rem; }

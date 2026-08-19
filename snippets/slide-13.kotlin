@@ -1,0 +1,9 @@
+// build.gradle.kts:29 — it tried, then backed off
+//    implementation("io.quarkus:quarkus-resteasy-reactive-multipart")
+
+// api/ConversionResource.kt:16 — different file, later in the same build
+import org.jboss.resteasy.reactive.RestForm
+import org.jboss.resteasy.reactive.multipart.FileUpload
+
+@POST
+fun convert(@RestForm(FileUpload.ALL) uploads: List<FileUpload>): UploadResponse {
