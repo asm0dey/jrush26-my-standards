@@ -110,6 +110,18 @@
 .slidev-layout.two-columns.grid-cols-2 { grid-template-columns: 2fr 3fr; }
 .two-columns > * { align-self: center; }
 
+/* Spec sheets stack instead: title, subtitle, then the full-width sheet. */
+.slidev-layout.stack { display: flex; flex-direction: column; justify-content: flex-start; }
+.stack .claim {
+  height: auto;
+  display: block;
+  padding-right: 0;
+  margin-bottom: 1.1rem;
+  font-size: 1.7rem;
+  line-height: 1.25;
+}
+.stack .claim .sub { font-size: 1rem; margin-top: 0.45rem; }
+
 /* Chapter cards name the tooling the attempt ran on, quietly under the title. */
 .chapter .toolref {
   font-family: JetBrains Mono, ui-monospace, monospace;
@@ -118,3 +130,64 @@
   margin-top: 0.5rem;
 }
 .chapter .toolref:first-of-type { margin-top: 1.4rem; }
+
+/* Editorial spec-sheets: authored content, so it wraps like prose instead of
+   posing as a verbatim <pre> artifact. */
+.artifact .spec {
+  display: grid;
+  grid-template-columns: max-content max-content 1fr;
+  gap: 0.42rem 1rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  align-items: baseline;
+}
+.artifact .spec .k {
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  white-space: nowrap;
+  padding-top: 0.15rem;
+}
+.artifact .spec .v { text-wrap: pretty; }
+
+/* Links stay the colour of their surroundings; the underline is the only signal. */
+.artifact .spec a, .statement a, .byline a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: currentColor;
+}
+
+/* Group heading inside a spec sheet — spans both columns. */
+.artifact .spec .g {
+  grid-column: 1 / -1;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.38;
+  margin-top: 0.5rem;
+}
+.artifact .spec .g:first-child { margin-top: 0; }
+
+/* URL column: quiet, and never the thing that wraps a row. */
+.artifact .spec .u {
+  font-size: 0.7rem;
+  opacity: 0.55;
+  white-space: nowrap;
+  padding-left: 0.9rem;
+  padding-top: 0.2rem;
+}
+
+/* Closing card: one contact per line, icon first. */
+.contacts {
+  display: inline-grid;
+  gap: 0.55rem;
+  margin-top: 2.2rem;
+  text-align: left;
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+.contacts .ct { display: flex; align-items: center; gap: 0.75rem; }
+.contacts .ct > span:first-child { width: 1.05em; height: 1.05em; opacity: 0.6; flex: none; }

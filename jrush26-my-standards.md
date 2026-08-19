@@ -176,7 +176,7 @@ class: chapter
 <!--
 **SLIDE 7 UP**
 
-AUTHOR-09 — name the assistant you used here. The repo holds no process files at all, so the tool is the only thing to name.
+The assistant was Junie. Same assistant as attempt two — the only thing that changes between them is the process, and here there is none: no spec, no plan, no guidelines file anywhere in the tree.
 
 Attempt one. Describe what I want, let it write, look at what came back.
 -->
@@ -208,7 +208,7 @@ process artifacts in repo at that commit:
 <!--
 **SLIDE 8 UP**
 
-One commit: a working disk-usage tool with a drill-down pie chart, 1769 lines, sixteen files. AUTHOR-03 — say how long that actually took.
+One commit: a working disk-usage tool with a drill-down pie chart, 1769 lines, sixteen files. One evening.
 
 It was the fastest of all five. I want to be honest about that, because everything after this is slower and has to earn the difference.
 -->
@@ -253,26 +253,20 @@ Attempt two. Write the guidelines up front, then hand it tasks against them.
 -->
 
 ---
-layout: two-cols
-class: artifact
+layout: default
+class: artifact stack
 ---
 
 <div class='claim'><div>One file. Read at the start of every session.</div><div class='sub'>JetBrains Junie · jetbrains.com/junie</div></div>
 
-::right::
-
 <div class='filepath'>attempt two — the tool and its one file</div>
 
-<div class='code'>
-
-```text 
-what it is    JetBrains' coding agent, inside the IDE
-the artifact  .junie/guidelines.md — numbered rules, plain prose
-how it runs   reads the file at the start of every session
-what I write  the rules. Nothing else is asked of me.
-link          jetbrains.com/junie
-```
-
+<div class='spec'>
+<div class='k'>what it is</div><div class='v'>JetBrains' coding agent, inside the IDE</div><div class='u'></div>
+<div class='k'>the artifact</div><div class='v'>.junie/guidelines.md — numbered rules, plain prose</div><div class='u'></div>
+<div class='k'>how it runs</div><div class='v'>reads the file at the start of every session</div><div class='u'></div>
+<div class='k'>what I write</div><div class='v'>the rules. Nothing else is asked of me.</div><div class='u'></div>
+<div class='k'>link</div><div class='v'><a href='https://jetbrains.com/junie'>jetbrains.com/junie</a></div><div class='u'></div>
 </div>
 
 <!--
@@ -434,30 +428,21 @@ Attempt three. Nothing gets implemented until it has been specified.
 -->
 
 ---
-layout: two-cols
-class: artifact
+layout: default
+class: artifact stack
 ---
 
 <div class='claim'><div>Ten phases. The intent is locked before code.</div><div class='sub'>Intent Integrity Kit · github.com/intent-integrity-chain/kit</div></div>
 
-::right::
+<div class='filepath'>attempt three — the kit, and what each phase leaves behind</div>
 
-<div class='filepath'>femtocli — the kit, and what each phase leaves behind</div>
-
-<div class='code'>
-
-```text 
-what it is     Intent Integrity Kit — intent locked before code
-the artifacts  constitution, spec.md, plan.md, tasks.md,
-               contracts/, checklists/, .feature files
-how it runs    constitution -> specify -> clarify -> plan ->
-               checklist -> testify -> tasks -> analyze -> implement
-what it locks  the .feature files, hashed before implementation:
-               the agent may rewrite code, never what passing means
-installed as   tessl-labs/intent-integrity-kit 2.1.0
-link           github.com/intent-integrity-chain/kit
-```
-
+<div class='spec'>
+<div class='k'>what it is</div><div class='v'>Intent Integrity Kit — intent locked before code</div><div class='u'></div>
+<div class='k'>the artifacts</div><div class='v'>constitution, spec.md, plan.md, tasks.md, contracts/, checklists/, .feature files</div><div class='u'></div>
+<div class='k'>how it runs</div><div class='v'>constitution → specify → clarify → plan → checklist → testify → tasks → analyze → implement</div><div class='u'></div>
+<div class='k'>what it locks</div><div class='v'>the .feature files, hashed before implementation — the agent may rewrite code, never what passing means</div><div class='u'></div>
+<div class='k'>installed as</div><div class='v'>tessl-labs/intent-integrity-kit 2.1.0</div><div class='u'></div>
+<div class='k'>link</div><div class='v'><a href='https://github.com/intent-integrity-chain/kit'>github.com/intent-integrity-chain/kit</a></div><div class='u'></div>
 </div>
 
 <!--
@@ -503,7 +488,9 @@ class: artifact
 
 To be fair to this one: it is right about what good practice looks like. Intent stated before implementation, acceptance criteria written down, nothing hand-waved.
 
-AUTHOR-06 — one thing it caught that the previous process would have let through.
+It got the architecture I wanted, and then it kept asking. Every detail came back to me as a user story I had to accept or reject before it would write anything. Look at row three: tests per user story, because by that point the stories were mine.
+
+Attempt two decided all of that on its own, and never told me it had.
 -->
 
 ---
@@ -675,28 +662,17 @@ Attempt four. On paper, the best-designed of the five.
 -->
 
 ---
-layout: two-cols
-class: artifact
+layout: default
+class: artifact stack
 ---
 
 <div class='claim'><div>ThinkRail runs it. OpenSpec shapes it.</div><div class='sub'>Worktrees for free — and one proposal to approve.</div></div>
 
-::right::
-
 <div class='filepath'>attempt four — the two tools</div>
 
-<div class='code'>
-
-```text 
-ThinkRail    worktree IDE for the pi agent, from JetBrains
-             one git worktree per workspace, by default
-             thinkrail.ai
-
-OpenSpec     the spec format it drives: one change proposal
-             plus delta specs, approved as a single unit
-             github.com/Fission-AI/OpenSpec
-```
-
+<div class='spec'>
+<div class='k'>ThinkRail</div><div class='v'>worktree IDE for the pi agent, from JetBrains — one git worktree per workspace, by default. <a href='https://thinkrail.ai'>thinkrail.ai</a></div><div class='u'></div>
+<div class='k'>OpenSpec</div><div class='v'>the spec format it drives — one change proposal plus delta specs, approved as a single unit. <a href='https://github.com/Fission-AI/OpenSpec'>github.com/Fission-AI/OpenSpec</a></div><div class='u'></div>
 </div>
 
 <!--
@@ -770,7 +746,7 @@ Currently, the `git_log` tool returns a fixed set of fields for every commit. Th
 
 There is essentially one step where I read an enormous plan with all its specs, and approve the lot.
 
-AUTHOR-07 — say how long the plan actually was.
+Four documents in one change folder: why it is happening, the technical decisions, the spec delta, and the task list. One read, one approval, and no second gate anywhere after it.
 
 Every decision in there was mine to make, and every one was correctly surfaced. They were just handed to me in a single lump.
 -->
@@ -780,7 +756,7 @@ layout: two-cols
 class: artifact
 ---
 
-<div class='claim'><div>Three documents. One yes.</div><div class='sub'>804 words, 25 checkboxes, no second gate.</div></div>
+<div class='claim'><div>Four documents. One yes.</div><div class='sub'>1534 words, 19 scenarios, no second gate.</div></div>
 
 ::right::
 
@@ -790,13 +766,14 @@ class: artifact
 
 ```text 
 openspec/changes/git-log-custom-fields/
-  proposal.md    28 lines   why, and what changes
-  design.md      43 lines   the technical decisions
-  tasks.md       25 lines   25 checkboxes, in 6 groups
-                 --------
-                 96 lines, 804 words
+  proposal.md             28 lines   why, and what changes
+  design.md               43 lines   the technical decisions
+  tasks.md                25 lines   14 checkboxes, in 4 groups
+  specs/git-log/spec.md   80 lines   1 requirement, 19 scenarios
+                         ---------
+                         176 lines, 1534 words
 
-one approval covers all three. There is no second gate.
+one approval covers all four. There is no second gate.
 ```
 
 </div>
@@ -804,7 +781,7 @@ one approval covers all three. There is no second gate.
 <!--
 **SLIDE 28 UP**
 
-This is what I was approving in one go. Proposal, design, tasks: ninety-six lines, eight hundred words, twenty-five checkboxes.
+This is what I was approving in one go. Proposal, design, tasks, and the spec delta: a hundred and seventy-six lines, fifteen hundred words, fourteen checkboxes, nineteen scenarios.
 
 It is not enormous. That is the uncomfortable part — it is a perfectly reasonable amount of reading, and I still skimmed it, because it arrived as one block with one decision attached: yes or no.
 -->
@@ -853,34 +830,20 @@ This is the one I still run.
 -->
 
 ---
-layout: two-cols
-class: artifact
+layout: default
+class: artifact stack
 ---
 
-<div class='claim'><div>Five tools. Five kinds of artifact.</div><div class='sub'>All of it public: github.com/asm0dey/calit</div></div>
+<div class='claim'><div>Five tools. I write none of it.</div><div class='sub'>All of it public: github.com/asm0dey/calit</div></div>
 
-::right::
+<div class='filepath'>github.com/asm0dey/calit — in Claude Code, I talk to</div>
 
-<div class='filepath'>github.com/asm0dey/calit — the process, named</div>
-
-<div class='code'>
-
-```text 
-tools
-  Claude Code        claude.com/claude-code
-  superpowers        github.com/obra/superpowers
-  grill-with-docs    github.com/mattpocock/skills
-  domain-modeling    github.com/mattpocock/skills
-  beans              github.com/hmans/beans
-
-what they made me write
-  CLAUDE.md          how this repo gets built
-  docs/superpowers/  a plan and a spec per change
-  CONTEXT.md         the domain, and the words I refuse
-  docs/adr/          4 decision records, in my words
-  .beans/            work items, beside the code
-```
-
+<div class='spec'>
+<div class='k'>superpowers</div><div class='v'>pulls the idea apart, then turns it into a plan</div><div class='u'><a href='https://github.com/obra/superpowers'>github.com/obra/superpowers</a></div>
+<div class='k'>grill-with-docs</div><div class='v'>questions me until we mean the same thing</div><div class='u'><a href='https://github.com/mattpocock/skills'>github.com/mattpocock/skills</a></div>
+<div class='k'>domain-modeling</div><div class='v'>argues with my words, then records them</div><div class='u'><a href='https://github.com/mattpocock/skills'>github.com/mattpocock/skills</a></div>
+<div class='k'>ponytail</div><div class='v'>keeps what gets written small</div><div class='u'><a href='https://github.com/DietrichGebert/ponytail'>github.com/DietrichGebert/ponytail</a></div>
+<div class='k'>beans</div><div class='v'>keeps the work list out of my head</div><div class='u'><a href='https://github.com/hmans/beans'>github.com/hmans/beans</a></div>
 </div>
 
 <!--
@@ -888,45 +851,41 @@ what they made me write
 
 Everything from here is one real repository. calit — a self-hosted Calendly alternative on Quarkus and Java 25, multi-user, Google Calendar sync. Public, so you can go read all of this after.
 
-AUTHOR-08 — one sentence each: superpowers drives the work, grill-with-docs and domain-modeling interrogate me until the decisions are written down, beans holds the work items.
+I do not write any of this. I talk to it. brainstorming pulls the idea apart before there is a plan, writing-plans turns what we agreed into one, and grill-with-docs keeps asking until we mean the same thing.
 
-The names date fast, and the links are in the shownotes. What matters is the right-hand column: every one of those files exists because the process made me decide something, and then wrote down what I decided.
+domain-modeling argues with my vocabulary and records what we settle on. ponytail keeps what gets written as small as it can be. beans keeps the work list out of my head.
+
+Then I read the spec, and I read the code. Usually not the plan. The plan is written for the agent — longer, and full of detail it needs and I do not. The spec is the part addressed to me.
+
+The names will date. The shape will not: every one of these makes me decide something before it writes anything down.
+
+And the repository is open. If you want to see what ten weeks of this actually looks like, or you have opinions about scheduling software, issues and pull requests are welcome.
 -->
 
 ---
-layout: two-cols
-class: artifact
+layout: default
+class: artifact stack
 ---
 
-<div class='claim'><div>A spec says what is wrong. A plan says what I will do.</div><div class='sub'>Both name the work item they came from.</div></div>
-
-::right::
+<div class='claim'><div>The spec is written for me. The plan is written for the agent.</div><div class='sub'>Both name the work item they came from.</div></div>
 
 <div class='filepath'>calit/docs/superpowers — one change, two documents</div>
 
-<div class='code'>
-
-```text 
-docs/superpowers/specs/2026-08-17-per-meeting-type-write-target-design.md
-
-  # Per-meeting-type Google write target (calit-bh5t)
-  Bean: `calit-bh5t` (feature) — blocked by `calit-rma2`
-  ## Problem
-  Today an owner has exactly one write calendar ...
-
-docs/superpowers/plans/2026-08-17-per-meeting-type-write-target.md
-
-  **Goal:** Let each Host optionally give one meeting type its own
-  write override — a connected Google calendar that type's events
-  are created on instead of that Host's write target.
-```
-
+<div class='spec'>
+<div class='g'>specs/2026-08-17-per-meeting-type-write-target-design.md</div>
+<div class='k'>written for</div><div class='v'>me</div><div class='u'></div>
+<div class='k'>says</div><div class='v'>today an owner has exactly one write calendar, and why that is wrong</div><div class='u'></div>
+<div class='g'>plans/2026-08-17-per-meeting-type-write-target.md</div>
+<div class='k'>written for</div><div class='v'>the agent</div><div class='u'></div>
+<div class='k'>says</div><div class='v'>let each Host give one meeting type its own write override, and how</div><div class='u'></div>
 </div>
 
 <!--
 **SLIDE 32 UP**
 
-This is one change, as two documents. The spec states the problem in domain terms; the plan states the goal and the architecture.
+This is one change, as two documents, and they have different readers. The spec states the problem in domain terms — that one is addressed to me, and it is the one I approve.
+
+The plan is longer and more detailed, because it is written for the agent. Most of the time I do not read it, and that is the point: the layer that needs my judgement is separated from the layer that does not.
 
 Both of them carry the work item id, so a year from now the why is one grep away.
 -->
@@ -1250,7 +1209,7 @@ class: artifact
 <img class='shot' src='/pr-122.png' alt='the same pull request'>
 
 <!--
-**SLIDE 32 UP — back to the opening PR**
+**SLIDE 43 UP — back to the opening PR**
 
 Same pull request. Under a process that encodes, this is one I would have written — because every decision in it would have been mine, and written down.
 
@@ -1264,17 +1223,21 @@ layout: center
 class: statement
 ---
 
-<div>@asm0dey | #JRush | #AIcoding</div>
-
-<div></div>
-
 <div>Does it encode your decisions — or make them for you?</div>
 
 
-<div class='vnote'>Closing card. Handle and conference hashtag large enough to photograph from the back row. The test repeated in small type beneath, so the photo carries it.</div>
+<div class='contacts'>
+<div class='ct'><span class='i-ph-globe'></span><span><a href='https://asm0dey.site'>asm0dey.site</a></span></div>
+<div class='ct'><span class='i-ph-envelope'></span><span><a href='mailto:me@asm0dey.site'>me@asm0dey.site</a></span></div>
+<div class='ct'><span class='i-ph-butterfly'></span><span>@asm0dey.site</span></div>
+<div class='ct'><span class='i-carbon-logo-x'></span><span>@asm0di0</span></div>
+</div>
+
+
+<div class='vnote'>Closing card. Contacts and conference hashtag large enough to photograph from the back row. The test repeated beneath, so the photo carries it.</div>
 
 <!--
 **SLIDE 44 UP**
 
-That is me, that is the test, and there is time for questions.
+That is me, that is the test, and there is time for questions. Everything is on that site, and calit is a link away from it.
 -->

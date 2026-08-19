@@ -1,8 +1,9 @@
 openspec/changes/git-log-custom-fields/
-  proposal.md    28 lines   why, and what changes
-  design.md      43 lines   the technical decisions
-  tasks.md       25 lines   25 checkboxes, in 6 groups
-                 --------
-                 96 lines, 804 words
+  proposal.md             28 lines   why, and what changes
+  design.md               43 lines   the technical decisions
+  tasks.md                25 lines   14 checkboxes, in 4 groups
+  specs/git-log/spec.md   80 lines   1 requirement, 19 scenarios
+                         ---------
+                         176 lines, 1534 words
 
-one approval covers all three. There is no second gate.
+one approval covers all four. There is no second gate.
