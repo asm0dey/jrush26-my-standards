@@ -1,0 +1,105 @@
+# Real files quoted on stage. The generator copies each range into snippets/ at
+# build time, so the deck keeps working when the source repos move on.
+# key = slide number; src = absolute path; lines = "A-B" (whole file if absent)
+0:
+  img: pr-122.png
+  label: 'github.com/asm0dey/calit — pull request #122, merged'
+8:
+  label: diskinventory — the first commit
+  lang: text
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/vibe-first-commit.txt
+12:
+  focus: '5'
+  label: fb2ebup/.junie/guidelines.md
+  lang: md
+  src: /home/finkel/work_self/fb2ebup/.junie/guidelines.md
+13:
+  label: fb2ebup — guideline rule 5, holding in two different files
+  lang: kotlin
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/preference-held.txt
+14:
+  focus: '1'
+  label: fb2ebup/src/main/kotlin/com/github/com/ExampleResource.kt
+  lang: kotlin
+  lines: 1-16
+  src: /home/finkel/work_self/fb2ebup/src/main/kotlin/com/github/com/ExampleResource.kt
+18:
+  label: femtocli/specs/001-codegen-parser/plan.md — 1 of 22 files
+  lang: md
+  lines: 29-40
+  src: /home/finkel/work_self/femtocli/specs/001-codegen-parser/plan.md
+26:
+  label: calit — git worktree list
+  lang: text
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/worktrees.txt
+27:
+  label: spring-git-mcp/openspec/changes/git-log-custom-fields/proposal.md — 1 of
+    4 documents
+  lang: md
+  lines: 1-12
+  src: /home/finkel/work_self/spring-git-mcp/openspec/changes/git-log-custom-fields/proposal.md
+33:
+  label: three real questions from calit sessions, verbatim
+  lang: text
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/questions.md
+34:
+  label: calit/docs/adr/0002-buffers-are-constraints-not-settings.md
+  lang: md
+  lines: 1-8
+  src: /home/finkel/work_self/calit/docs/adr/0002-buffers-are-constraints-not-settings.md
+35:
+  label: calit/CONTEXT.md
+  lang: md
+  lines: 10-24
+  src: /home/finkel/work_self/calit/CONTEXT.md
+43:
+  img: pr-122.png
+  label: the same pull request
+20:
+  label: femtocli/specs/001-codegen-parser — every file the process demanded
+  lang: text
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/spec-kit-files.txt
+21:
+  img: spec-kit-sheet.png
+  label: 'femtocli/specs/001-codegen-parser — all 22 documents'
+31:
+  label: github.com/asm0dey/calit — the process, named
+  lang: text
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/stack.txt
+25:
+  label: attempt four — the two tools
+  lang: text
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/tool-thinkrail.txt
+17:
+  label: femtocli — the kit, and what each phase leaves behind
+  lang: text
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/tool-iik.txt
+11:
+  label: attempt two — the tool and its one file
+  lang: text
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/tool-junie.txt
+40:
+  label: git log across the five repositories
+  lang: text
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/five-repos.txt
+37:
+  label: calit/.beans — the chain behind pull request #122
+  lang: text
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/beans-chain.txt
+36:
+  label: calit — every process artifact, ten weeks in
+  lang: text
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/calit-numbers.txt
+32:
+  label: calit/docs/superpowers — one change, two documents
+  lang: text
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/superpowers-pair.txt
+28:
+  label: spring-git-mcp/openspec/changes/git-log-custom-fields — the whole approval
+  lang: text
+  src: /home/finkel/presentations/my-ai-dev-process/assets-src/openspec-approval.txt
+19:
+  label: femtocli/specs/001-codegen-parser/analysis.md
+  lang: md
+  lines: 1-16
+  src: /home/finkel/work_self/femtocli/specs/001-codegen-parser/analysis.md

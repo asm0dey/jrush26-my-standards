@@ -1,0 +1,16 @@
+{
+  "name": "jrush26-my-standards",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deck": "python3 build-slidev.py",
+    "dev": "slidev jrush26-my-standards.md --open",
+    "build": "slidev build jrush26-my-standards.md",
+    "export": "slidev export jrush26-my-standards.md"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.19.1",
+    "@slidev/theme-default": "^0.25.0",
+    "playwright-chromium": "^1.58.0"
+  }
+}

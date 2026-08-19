@@ -1,0 +1,24 @@
+analysis.md                                               141
+checklists/requirements-quality.md                        121
+checklists/requirements.md                                 53
+context.json                                                8
+contracts/option-parsing.md                               209
+contracts/positional-parameters.md                         86
+contracts/type-conversion.md                              206
+data-model.md                                             176
+plan.md                                                   326
+quickstart.md                                             314
+research.md                                               137
+spec.md                                                   230
+tasks.md                                                  248
+tests/features/agent-args-mode.feature                     34
+tests/features/basic-command-with-options.feature          70
+tests/features/custom-spec-implementation.feature          46
+tests/features/did-you-mean-suggestions.feature            40
+tests/features/help-generation.feature                     52
+tests/features/java-modules-support.feature                40
+tests/features/positional-parameters.feature               64
+tests/features/subcommands-and-mixins.feature              46
+tests/features/type-conversion-and-validation.feature      82
+-------------------------------------------------------------
+22 files, before a line of code                          2729

@@ -1,0 +1,7 @@
+ThinkRail    worktree IDE for the pi agent, from JetBrains
+             one git worktree per workspace, by default
+             thinkrail.ai
+
+OpenSpec     the spec format it drives: one change proposal
+             plus delta specs, approved as a single unit
+             github.com/Fission-AI/OpenSpec

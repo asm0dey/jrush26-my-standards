@@ -1,0 +1,9 @@
+calit-0hyn  completed  Issue #116: 24h/locale-correct time format
+                       on booking page
+calit-184b  completed    Task 3: Persist host's 12h/24h preference
+calit-wk3r  completed    Task 4: Settings UI for the preference
+calit-syal  completed  Fix no-JS admin fallback + label wording
+calit-4whp  todo       Validate OwnerSettings.timezone on save
+calit-mhgs  todo       /me pages disagree on which timezone they show
+
+closed by pull request #122 — the one from slide one

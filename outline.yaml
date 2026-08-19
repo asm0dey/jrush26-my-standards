@@ -1,0 +1,914 @@
+talk:
+  title: "My Standards, Their Keyboard"
+  slug: "jrush26-my-standards"
+  speakers: ["Pasha Finkelshteyn"]
+  duration_min: 30
+  audience: "JVM/backend developers at JRush who already use an AI coding assistant daily and are unhappy with what it ships"
+  audience_spread: "heterogeneous"
+  mode: "Journey Mapping"
+  venue: "JRush 2026"
+  slide_budget: 36
+  pacing_wpm: [130, 150]
+  architecture: "narrative-arc"      # Phase 2 Decision — pending author confirmation
+  engine: null                       # upstream Renderer enum has no `slidev`; see engine_source
+  deck_theme: "slidev:seriph (pending Phase 2 theme pick)"
+  engine_source: "author-directed: Slidev (markdown deck). Upstream schema enum is pptx|presenterm only — issue #318."
+  commercial_intent: "none"
+  profanity_register: "zero; never on slides"
+  delivery_date: null
+  catalog_reference: "sessions-catalog.md — My Standards, Their Keyboard"
+  thesis: |
+    The model has no preferences; mine took ten years to form. An AI-assisted
+    process is the only place those preferences can get in — and four of the five
+    processes I ran failed for the same reason: each one made decisions that were
+    mine to make. Vibe coding was fast and unreviewable. Guidelines-first was the
+    first time my preferences survived a whole session. Full spec rigor was
+    thorough enough that I stopped opening it. The fourth was good on paper and
+    never fit how I work. The fifth — the one I still run — encodes what I decide
+    instead of deciding for me. That distinction, encode vs replace, is a test the
+    audience can run against whatever process they use now.
+  tldr: |
+    I ran five AI-assisted development processes on real work and kept one. This
+    talk shows all five on screen with their actual artifacts: what each produced,
+    and the specific way four of them fell over — too loose (unreviewable), too
+    heavy (stopped opening it), wrong shape (never fit my work).
+
+    The common defect in every process I dropped: it made the decisions that are
+    mine to make. The one I kept writes down what I decide. You leave with one
+    test — does this process encode my preferences, or replace them? — and the
+    process I run today, in enough detail to run it yourself.
+  must_include:
+    - "All five processes visible on screen with real artifacts from real work"
+    - "The encode-vs-replace test, stated plainly and applied on stage"
+    - "Named failure mode per dropped process: no artifact / rules without reasons / too much volume / all at one gate"
+    - "Hard 4-minute closing allocation (recurring `shortchanged` antipattern)"
+  must_avoid:
+    - "Tool review framing — the five processes are evidence, not the subject"
+    - "BellSoft positioning or any vendor pitch"
+    - "Overlap with Git Panic to Git Zen (AI driving one tool) and JOIN Club (reading AI-written SQL)"
+    - "Broad pop culture beyond the single And Then There Were None subtitle riff"
+  applied_patterns:
+    - id: "narrative-arc"
+    - id: "entertainment"
+    - id: "mentor"
+    - id: "bookends"
+    - id: "master-story"
+      story_id: "five-processes"
+      beat: "introduce"
+    - id: "foreshadowing"
+      plant_id: "the-rejected-pr"
+    - id: "inoculation"
+      resistance_vector: "vulnerabilities"
+    - id: "context-keeper"
+    - id: "expansion-joints"
+
+chapters:
+  - id: "hook"
+    title: "The PR I Would Have Rejected"
+    target_min: 3
+    accent: "red"
+    argument_beats:
+      - text: "A PR I shipped, AI-written, that I skimmed and approved. Read properly a week later, it is code I would have sent back from anyone on my team."
+        tags: ["opening", "concrete"]
+      - text: "Nothing broke, and there was no bug to find. The code simply was not how I write code, and I had signed off on it anyway."
+        tags: ["twist"]
+      - text: "The gap between what I approved and what I would have accepted in review is what this whole talk is about."
+        tags: ["stakes"]
+
+  - id: "thesis"
+    title: "The Model Has No Preferences"
+    target_min: 2
+    accent: "grey"
+    argument_beats:
+      - text: "Ten-plus years in the JVM ecosystem gave me strong opinions about how code should look and which tools I reach for. The model has none of that."
+        tags: ["thesis"]
+      - text: "So how do my standards get into code I never typed? One way only: the process I put around the assistant. There is no second channel."
+        tags: ["thesis", "big-idea"]
+      - text: "Five processes, four dropped. Every one I dropped failed the same way: it made decisions that were mine to make. That observation becomes the test at the end."
+        tags: ["foreshadow", "roadmap"]
+
+  - id: "vibe"
+    title: "Attempt One: Vibe Coding"
+    target_min: 3.5
+    accent: "orange"
+    argument_beats:
+      - text: "Describe the outcome, let it write, look at the result. It was the fastest of the five, by a distance."
+        tags: ["what-it-did"]
+      - text: "Nothing recorded a single decision, so there was nothing to review against. The diff was the only record I had, and a diff records what changed and never why."
+        tags: ["failure-mode"]
+      - text: "It also set the bar. Anything slower has to buy back the time it costs me, and that is what the other four were measured against."
+        tags: ["credit-where-due"]
+
+  - id: "guidelines"
+    title: "Attempt Two: Guidelines First"
+    target_min: 4.5
+    accent: "green"
+    argument_beats:
+      - text: "Write the guidelines up front, hand it tasks against them. First time my preferences survived a whole session instead of the first three files."
+        tags: ["what-it-did", "turning-point"]
+      - text: "The artifact is the point: a written guideline is a decision I made once, in my words, that the model reads every session."
+        tags: ["insight"]
+      - text: "It solved the task, and I still did not like the code. Guidelines encode rules; the code I would have written comes out of decisions, and most decisions never take the shape of a rule."
+        tags: ["failure-mode"]
+      - text: "It also never explained itself. With no rationale for any choice, I could not tell a deliberate call from a coin flip, so I never corrected anything. I just overruled it."
+        tags: ["failure-mode"]
+
+  - id: "spec-rigor"
+    title: "Attempt Three: Full Spec Rigor"
+    target_min: 3.5
+    accent: "blue"
+    cuttable: false
+    argument_beats:
+      - text: "Specify before implementing. It was thorough, and it was right about what good practice looks like."
+        tags: ["what-it-did"]
+      - text: "It was heavy, and after a few weeks I stopped opening it. A process you abandon encodes nothing. Its real ceiling is whatever you still run."
+        tags: ["failure-mode"]
+      - text: "Rigor costs attention, and it costs mine. I am the one component in this system that can quietly opt out."
+        tags: ["insight"]
+
+  - id: "wrong-shape"
+    title: "Attempt Four: One Enormous Gate"
+    target_min: 3.5
+    accent: "purple"
+    cuttable: true
+    argument_beats:
+      - text: "Several things right that the others got wrong. Worktrees by default, so parallel work stopped stepping on itself. Credit where it is due."
+        tags: ["what-it-did", "credit-where-due"]
+      - text: "The material was fine; the timing was not. There is effectively one step where I read an enormous plan with its specs and approve the lot."
+        tags: ["failure-mode"]
+      - text: "Every decision that was mine to make was real and correctly surfaced. They arrived in one lump, and nobody reviews a lump that size. They skim it, which is what I did to the opening PR."
+        tags: ["failure-mode", "callback"]
+      - text: "Attempt three drowned me in volume. This one got the volume right and the timing wrong. A process has to spread my decisions across the moments when I can actually make them."
+        tags: ["insight"]
+
+  - id: "today"
+    title: "What I Run Today"
+    target_min: 5
+    accent: "yellow"
+    argument_beats:
+      - text: "The current stack, shown through the artifacts it produced on real work: the files, the diffs, the task entries."
+        tags: ["payoff", "concrete"]
+      - text: "It survives because it asks me for the decisions that are mine, then writes down what I decided so neither of us re-derives it next week."
+        tags: ["encode"]
+      - text: "It is also temporary. This is attempt five rather than the answer, and the version on these slides dates fast."
+        tags: ["inoculation", "honest-limit"]
+
+  - id: "coda"
+    title: "Their Keyboard, Your Standards"
+    target_min: 4
+    accent: "red"
+    argument_beats:
+      - text: "The test, stated plainly: does this process encode the decisions that are mine, or does it make them for me?"
+        tags: ["the-test", "big-idea"]
+      - text: "Run it against the four I dropped — each fails it differently: no artifact at all, rules without the reasons behind them, more volume than I would read, and every decision handed over at one gate."
+        tags: ["apply-the-test"]
+      - text: "Then run it against whatever you used this morning. If you cannot point at where your standards live in it, they live only in your head."
+        tags: ["call-to-action"]
+      - text: "Callback to the opening PR: run that same work through a process that encodes, and it is a PR I would have written, because the decisions inside it would have been mine."
+        tags: ["bookend", "new-bliss"]
+
+slides:
+  - n: 0
+    chapter: "hook"
+    title: "A PR I Approved"
+    format: "EXCEPTION"
+    format_justification: "Real screenshot of a real merged PR — the credibility of the whole talk rests on this being an actual artifact, not a mock-up."
+    visual: "Screenshot of a merged pull request. Green Merged badge, my name as approver, small diff stat. Nothing annotated yet."
+    text_overlay: "none"
+    placeholders: ["AUTHOR-01"]
+    script:
+      - cue: "SLIDE 0 UP"
+      - line: "This is a pull request I merged. AI wrote it, I read the diff, it did what I asked, I approved it."
+      - line: "AUTHOR-01 — one sentence on what the PR actually did, so the room has context."
+      - line: "Nothing broke. There is no incident story at the end of this."
+    applied_patterns:
+      - id: "opening-punch"
+        flavors: ["personal", "unexpected"]
+      - id: "master-story"
+        story_id: "five-processes"
+        beat: "introduce"
+    callbacks:
+      - kind: "plant"
+        id: "the-rejected-pr"
+
+  - n: 1
+    chapter: "hook"
+    title: "A Week Later"
+    format: "EXCEPTION"
+    format_justification: "Same screenshot as slide 1 with my review annotations on it — the contrast only works if it is visibly the identical artifact."
+    visual: "The same PR screenshot, now covered in the review comments I would have written if it had come from anyone else. Red margin notes."
+    text_overlay: "I would have rejected this"
+    placeholders: ["SCREENSHOT-02", "AUTHOR-02"]
+    script:
+      - cue: "SLIDE 1 UP — same screenshot, annotated"
+      - line: "A week later I read it properly. These are the comments I would have left if this had come from anyone on my team."
+      - line: "AUTHOR-02 — name two or three of the actual objections. None of them are bugs. All of them are choices."
+      - parenthetical: "(beat — let them read one of the annotations)"
+      - line: "I approved code I would have sent back. So whose fault is that? Not the model's, and that is the uncomfortable part."
+    applied_patterns:
+      - id: "opening-punch"
+        flavors: ["challenging"]
+      - id: "walk-around"
+        registers: ["C"]
+
+  - n: 2
+    chapter: "hook"
+    title: "My Standards, Their Keyboard"
+    format: "TITLE"
+    visual: "Title card, arriving after the hook rather than before it. Subtitle beneath in smaller type."
+    text_overlay: "My Standards, Their Keyboard\nFour AI processes, and then there was one"
+    script:
+      - cue: "SLIDE 2 UP"
+      - line: "That is the talk. Five processes, four of them dropped, and the one thing all four got wrong."
+  - n: 3
+    chapter: "hook"
+    title: "Who Is Complaining"
+    format: "FULL"
+    visual: "Name, handle, one line of context. Small type, no logo wall, no career timeline."
+    text_overlay: "Pasha Finkelshteyn · @asm0dey\nTen-plus years in the JVM. Developer Advocate at BellSoft."
+    script:
+      - cue: "SLIDE 3 UP"
+      - line: "Quickly, so you know whose taste you are about to hear about: ten-plus years in the JVM ecosystem, mostly Java and Kotlin, developer advocate at BellSoft."
+      - line: "That decade is where my preferences come from, and it is the only reason any of this bothers me."
+    applied_patterns:
+      - id: "delayed-self-introduction"
+      - id: "anti-sell"
+  - n: 4
+    chapter: "thesis"
+    title: "The Model Has No Preferences"
+    format: "FULL"
+    visual: "Typographic statement slide. One line, large, centered."
+    text_overlay: "The model has no preferences.\nMine took ten years."
+    script:
+      - cue: "SLIDE 4 UP"
+      - line: "Ten-plus years in the JVM ecosystem gave me strong opinions about how code should look and which tools I reach for."
+      - line: "The model has none of that. Ask it the same question twice and you can get two different styles back, and both are fine by it."
+
+  - n: 5
+    chapter: "thesis"
+    title: "The Process Is the Channel"
+    format: "FULL"
+    visual: "Single diagram: me on one side, keyboard/repo on the other, one labelled channel between them marked PROCESS. Everything else greyed."
+    text_overlay: "The process is the only channel my standards travel through."
+    big_idea: true
+    thesis: "preview"
+    applied_patterns:
+      - id: "call-to-adventure"
+        big_idea_text: "An AI process is only worth running if it encodes the decisions that are yours to make, instead of making them for you."
+      - id: "walk-around"
+        registers: ["D"]
+    script:
+      - cue: "SLIDE 5 UP"
+      - line: "It is their keyboard now. So how does anything of mine get in? Through the process I put around it, and nowhere else."
+      - line: "So every time I call the process overhead, I am calling my own standards overhead."
+
+  - n: 6
+    chapter: "thesis"
+    title: "Five Attempts"
+    format: "FULL"
+    visual: "Five numbered tiles in a row, one through five. Tiles two through five are blank silhouettes; only the tile shapes are visible."
+    text_overlay: "1  2  3  4  5"
+    builds:
+      - step: 0
+        desc: "Five empty numbered tiles"
+      - step: 1
+        desc: "Tiles 1-4 stamped DROPPED"
+      - step: 2
+        desc: "Tile 5 highlighted — the survivor"
+    script:
+      - cue: "SLIDE 6 UP"
+      - line: "Five processes on real work."
+      - cue: "BUILD 01"
+      - line: "I dropped four."
+      - cue: "BUILD 02"
+      - line: "Every one I dropped failed the same way: it made a decision that was mine to make. Keep that in your head, we come back to it at the end."
+    applied_patterns:
+      - id: "foreshadowing"
+        plant_id: "the-test"
+    callbacks:
+      - kind: "plant"
+        id: "four-dropped"
+      - kind: "plant"
+        id: "the-test"
+
+  - n: 7
+    chapter: "vibe"
+    title: "Attempt One: Vibe Coding"
+    format: "FULL"
+    visual: "Chapter card. Big numeral 1, process name beneath."
+    text_overlay: "1 — Vibe coding"
+    script:
+      - cue: "SLIDE 7 UP"
+      - line: "AUTHOR-09 — name the assistant you used here. The repo holds no process files at all, so the tool is the only thing to name."
+      - line: "Attempt one. Describe what I want, let it write, look at what came back."
+
+  - n: 8
+    chapter: "vibe"
+    title: "It Was Fast"
+    format: "EXCEPTION"
+    format_justification: "Real session artifact — the point is how much working code arrived from how little input, which only lands with the actual numbers."
+    visual: "git log of the first commit, source: diskinventory@7b67e8d — 16 files, 1769 insertions, and a grep showing zero spec, plan, ADR or guideline files in that tree."
+    text_overlay: "Fastest of the five"
+    placeholders: ["AUTHOR-03"]
+    script:
+      - cue: "SLIDE 8 UP"
+      - line: "One commit: a working disk-usage tool with a drill-down pie chart, 1769 lines, sixteen files. AUTHOR-03 — say how long that actually took."
+      - line: "It was the fastest of all five. I want to be honest about that, because everything after this is slower and has to earn the difference."
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["B"]
+
+  - n: 9
+    chapter: "vibe"
+    title: "Nothing to Review Against"
+    format: "FULL"
+    visual: "An empty folder labelled 'decisions'. Beside it, a fat diff labelled 'the only record'."
+    text_overlay: "A diff records the what.\nMy standards live in the why."
+    progressive_lists:
+      - id: "failure-ledger"
+        item_index: 1
+    script:
+      - cue: "SLIDE 9 UP"
+      - line: "There was no artifact. Nothing recorded a single decision, so there was nothing to review against."
+      - line: "A diff tells you what changed, and never why that shape instead of another one. And why is exactly where all my standards live."
+      - line: "So, is vibe coding a moral failing? No. It is fast, and giving that speed up costs something real. It set the bar the other four had to clear."
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["A"]
+
+  - n: 10
+    chapter: "guidelines"
+    title: "Attempt Two: Guidelines First"
+    format: "FULL"
+    visual: "Chapter card. Big numeral 2."
+    text_overlay: |-
+      2 — Guidelines first
+      JetBrains Junie · jetbrains.com/junie
+    script:
+      - cue: "SLIDE 10 UP"
+      - line: "Attempt two. Write the guidelines up front, then hand it tasks against them."
+
+  - n: 11
+    cuttable: true
+    cut_tier: 2
+    chapter: "guidelines"
+    title: "Junie"
+    format: "EXCEPTION"
+    format_justification: "The tool is named and shown once, so the artifacts that follow are attributable; it is not a review."
+    visual: "Junie's one process file and what it asks of me."
+    text_overlay: |-
+      One file. Read at the start of every session.
+      JetBrains Junie · jetbrains.com/junie
+    script:
+      - cue: "SLIDE 11 UP"
+      - line: "Attempt two is Junie, JetBrains' agent in the IDE. The whole process is one file."
+      - line: "I write the rules; it reads them before it does anything. That is the entire contract."
+  - n: 12
+    chapter: "guidelines"
+    title: "The Guidelines File"
+    format: "EXCEPTION"
+    format_justification: "Real guidelines file from real work — showing my actual words is what proves this is an encoding of my preferences and not a generic template."
+    visual: "Screenshot of the actual generated-then-edited guidelines file, scrolled to a rule that is unmistakably mine."
+    text_overlay: "none"
+    placeholders: ["AUTHOR-04"]
+    script:
+      - cue: "SLIDE 12 UP"
+      - line: "This is the artifact. AUTHOR-04 — read out one rule that is unmistakably mine and would never appear in a default template."
+      - line: "A written guideline is a decision I made once, in my words, that the model reads at the start of every session."
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["A"]
+
+  - n: 13
+    chapter: "guidelines"
+    title: "My Preferences Survived a Session"
+    format: "FULL"
+    visual: "Two excerpts from fb2ebup, stacked: the banned dependency commented out in build.gradle.kts, and the approved API used correctly in ConversionResource.kt. Rule 5 of the guidelines file governs both."
+    text_overlay: |-
+      One rule. Two files. Hours apart.
+      Rule 5 said not to add the multipart extension — Quarkus 3 already ships those APIs.
+    script:
+      - cue: "SLIDE 13 UP"
+      - line: "Rule five of that file says: do not add the multipart extension, Quarkus 3 already has those APIs. Top excerpt is the build file, where it tried anyway and then commented the line out."
+      - line: "Bottom excerpt is a different file, written later in the same build, using the API the rule points at instead."
+      - line: "That is the whole win, and it is a small one. Before this, my preferences lasted about three files before the assistant drifted back to its own defaults. Here one of them was still in force at the other end of the codebase, because it was written down instead of remembered."
+      - line: "If the talk ended here, it would be a happy talk. It runs another twenty minutes."
+    applied_patterns:
+      - id: "master-story"
+        story_id: "five-processes"
+        beat: "recall-1"
+
+  - n: 14
+    chapter: "guidelines"
+    title: "It Solved the Task. I Still Did Not Like the Code."
+    format: "EXCEPTION"
+    format_justification: "A real generated snippet that follows every written rule and is still not what I would have written — the argument fails without seeing the actual code."
+    visual: "The generated Kotlin, quoted from the repo: every guideline satisfied, and the package line is one no human would have shipped."
+    text_overlay: "Every guideline satisfied.\nNothing in the file said anything about package names."
+    placeholders: ["AUTHOR-05"]
+    progressive_lists:
+      - id: "failure-ledger"
+        item_index: 2
+    script:
+      - cue: "SLIDE 14 UP"
+      - line: "It solved the task. Every rule in the file was respected. And I still did not want this code in my repository."
+      - line: "Read the package name. Every file in that project is under com.github.com — the scaffold's placeholder, never renamed, and no guideline of mine said anything about package names."
+      - line: "Guidelines encode rules. But the code I would have written comes out of a sequence of decisions, and most of those never take the shape of a rule."
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["A"]
+
+  - n: 15
+    chapter: "guidelines"
+    title: "And It Never Explained Itself"
+    format: "FULL"
+    visual: "A choice fork rendered twice: one path taken, the other faded. No annotation anywhere on either path."
+    text_overlay: "No rationale, so nothing to correct.\nOnly overrule, session after session."
+    progressive_lists:
+      - id: "failure-ledger"
+        item_index: 3
+    script:
+      - cue: "SLIDE 15 UP"
+      - line: "And it never explained a single choice it made."
+      - line: "Without a rationale, how do I tell a deliberate call from a coin flip? I cannot. So I never correct anything, I just overrule it, session after session."
+      - line: "So, on to something that writes its reasoning down."
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["C"]
+
+  - n: 16
+    chapter: "spec-rigor"
+    title: "Attempt Three: Full Spec Rigor"
+    format: "FULL"
+    visual: "Chapter card. Big numeral 3."
+    text_overlay: |-
+      3 — Specify first, then implement
+      Intent Integrity Kit · github.com/intent-integrity-chain/kit
+    script:
+      - cue: "SLIDE 16 UP"
+      - line: "Attempt three. Nothing gets implemented until it has been specified."
+
+  - n: 17
+    cuttable: true
+    cut_tier: 2
+    chapter: "spec-rigor"
+    title: "The Intent Integrity Kit"
+    format: "EXCEPTION"
+    format_justification: "The tool is named and shown once, so the artifacts that follow are attributable; it is not a review."
+    visual: "The kit's ten phases and the artifacts each one drops in the repo."
+    text_overlay: |-
+      Ten phases. The intent is locked before code.
+      Intent Integrity Kit · github.com/intent-integrity-chain/kit
+    script:
+      - cue: "SLIDE 17 UP"
+      - line: "This one is the Intent Integrity Kit. Ten phases, and the interesting bit is what it locks: the feature files are hashed before implementation starts."
+      - line: "The agent can rewrite the code as much as it likes. It cannot rewrite what passing means."
+  - n: 18
+    chapter: "spec-rigor"
+    title: "It Was Right About Everything"
+    format: "EXCEPTION"
+    format_justification: "The real spec artifact — its thoroughness is the evidence, and thoroughness is only visible in the real document."
+    visual: "The actual spec document, zoomed out far enough that the sheer structure is the message: sections, acceptance criteria, intent statements."
+    text_overlay: |-
+      It was right about everything.
+      A gate table, checked before a line of code was written.
+    placeholders: ["AUTHOR-06"]
+    script:
+      - cue: "SLIDE 18 UP"
+      - line: "To be fair to this one: it is right about what good practice looks like. Intent stated before implementation, acceptance criteria written down, nothing hand-waved."
+      - line: "AUTHOR-06 — one thing it caught that the previous process would have let through."
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["A"]
+
+  - n: 19
+    cuttable: true
+    cut_tier: 1
+    chapter: "spec-rigor"
+    title: "It Graded Its Own Homework"
+    format: "EXCEPTION"
+    format_justification: "The kit's own analysis report is the strongest evidence that the process was internally correct."
+    visual: "analysis.md: health score 99.5 out of 100, every constitutional principle PASS."
+    text_overlay: |-
+      It audited itself and scored 99.5 out of 100.
+      Every principle: PASS.
+    script:
+      - cue: "SLIDE 19 UP"
+      - line: "And it checked its own work. Health score ninety-nine point five out of a hundred, every constitutional principle passing, every requirement traced to a task."
+      - line: "I want to be fair to it: none of that is wrong. It is a genuinely good report about a genuinely thorough process."
+
+  - n: 20
+    cuttable: true
+    cut_tier: 1
+    chapter: "spec-rigor"
+    title: "Twenty-Two Files"
+    format: "EXCEPTION"
+    format_justification: "The volume is the argument; a summary of the volume is not the volume."
+    visual: "The specs directory listing with per-file line counts — every artifact the process demanded before implementation."
+    text_overlay: |-
+      Twenty-two files. Two thousand seven hundred lines.
+      Spec, plan, tasks, contracts, checklists, feature files.
+    script:
+      - cue: "SLIDE 20 UP"
+      - line: "That is the directory. Twenty-two files, twenty-seven hundred lines, and not one of those lines is code."
+
+  - n: 21
+    chapter: "spec-rigor"
+    title: "All Of It, Before Any Code"
+    format: "EXCEPTION"
+    format_justification: "Zoomed out far enough to be unreadable on purpose — the mass is the message, not the words."
+    visual: "Contact sheet of all 22 spec documents rendered as pages, tiled — deliberately too small to read."
+    text_overlay: |-
+      I read all of this before writing any code.
+      Once.
+    script:
+      - cue: "SLIDE 21 UP"
+      - line: "Here it is at a glance. You are not meant to read it — that is the point. I read it once, properly, for the first feature."
+      - line: "*(beat)*"
+      - line: "Then never again."
+
+  - n: 22
+    chapter: "spec-rigor"
+    title: "I Stopped Opening It"
+    format: "FULL"
+    visual: "A usage line that starts high and decays to zero over a few weeks. No axis drama, just the shape."
+    text_overlay: "A process you abandon encodes nothing."
+    progressive_lists:
+      - id: "failure-ledger"
+        item_index: 4
+    script:
+      - cue: "SLIDE 22 UP"
+      - line: "So what went wrong? Nothing, on paper. It was just heavy, and after a few weeks I stopped opening it."
+      - parenthetical: "(beat)"
+      - line: "A process you abandon encodes nothing. Whatever you still run on a Tuesday afternoon is its real ceiling."
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["C"]
+
+  - n: 23
+    chapter: "spec-rigor"
+    title: "Rigor Is Not Free"
+    format: "FULL"
+    visual: "A scale: on one side the spec's guarantees, on the other the attention it costs. The attention side is labelled with one word — me."
+    text_overlay: "The cost lands on the one part of the system that can quit."
+    script:
+      - cue: "SLIDE 23 UP"
+      - line: "Rigor has a price, and it is paid in my attention. I am also the one component in this system that can quietly opt out, and that is what I did."
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["D"]
+
+  - n: 24
+    chapter: "wrong-shape"
+    title: "Attempt Four: One Enormous Gate"
+    format: "FULL"
+    cuttable: true
+    visual: "Chapter card. Big numeral 4."
+    text_overlay: |-
+      4 — Plan everything, then approve it
+      ThinkRail · thinkrail.ai
+      OpenSpec · github.com/Fission-AI/OpenSpec
+    script:
+      - cue: "SLIDE 24 UP"
+      - line: "Attempt four. On paper, the best-designed of the five."
+
+  - n: 25
+    cuttable: true
+    cut_tier: 2
+    chapter: "wrong-shape"
+    title: "ThinkRail and OpenSpec"
+    format: "EXCEPTION"
+    format_justification: "The tool is named and shown once, so the artifacts that follow are attributable; it is not a review."
+    visual: "The two tools of attempt four side by side: the worktree IDE, and the spec format it drives."
+    text_overlay: |-
+      ThinkRail runs it. OpenSpec shapes it.
+      Worktrees for free — and one proposal to approve.
+    script:
+      - cue: "SLIDE 25 UP"
+      - line: "ThinkRail is a worktree IDE for the pi agent, out of JetBrains. Every workspace is its own git worktree, without asking."
+      - line: "OpenSpec is the spec format underneath: one change proposal plus the deltas it makes to the specs, approved as a single unit. Hold onto that last part."
+  - n: 26
+    cuttable: true
+    cut_tier: 1
+    chapter: "wrong-shape"
+    title: "Credit Where It Is Due"
+    format: "EXCEPTION"
+    format_justification: "Real terminal showing parallel worktrees — a genuine strength worth showing honestly, and a screenshot is the only proof it was default behaviour and not something I set up."
+    visual: "Terminal with multiple worktrees in flight, each on its own branch, none stepping on the others."
+    text_overlay: "Worktrees by default"
+    script:
+      - cue: "SLIDE 26 UP"
+      - line: "It got real things right. Worktrees by default, so parallel work stopped colliding. I did not have to ask for that."
+      - line: "I dropped it anyway, over one structural choice."
+
+  - n: 27
+    cuttable: true
+    cut_tier: 2
+    chapter: "wrong-shape"
+    title: "One Step, One Enormous Plan"
+    format: "EXCEPTION"
+    format_justification: "The volume-at-one-moment argument only lands if the room sees the actual length of the single document I was asked to approve."
+    visual: "The real plan document scrolled fast from top to bottom, or shown as a very long single page. Length is the message."
+    text_overlay: "Read all of this. Approve. Go."
+    placeholders: ["AUTHOR-07"]
+    progressive_lists:
+      - id: "failure-ledger"
+        item_index: 5
+    script:
+      - cue: "SLIDE 27 UP"
+      - line: "There is essentially one step where I read an enormous plan with all its specs, and approve the lot."
+      - line: "AUTHOR-07 — say how long the plan actually was."
+      - line: "Every decision in there was mine to make, and every one was correctly surfaced. They were just handed to me in a single lump."
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["B"]
+
+  - n: 28
+    chapter: "wrong-shape"
+    title: "What One Approval Covered"
+    format: "EXCEPTION"
+    format_justification: "The size of the single gate, measured — the artifact behind the claim."
+    visual: "The three documents in the change directory, with line counts and the total."
+    cuttable: false
+    text_overlay: |-
+      Three documents. One yes.
+      804 words, 25 checkboxes, no second gate.
+    script:
+      - cue: "SLIDE 28 UP"
+      - line: "This is what I was approving in one go. Proposal, design, tasks: ninety-six lines, eight hundred words, twenty-five checkboxes."
+      - line: "It is not enormous. That is the uncomfortable part — it is a perfectly reasonable amount of reading, and I still skimmed it, because it arrived as one block with one decision attached: yes or no."
+
+  - n: 29
+    cuttable: true
+    cut_tier: 2
+    chapter: "wrong-shape"
+    title: "A Lump Does Not Get Reviewed"
+    format: "FULL"
+    visual: "The annotated PR from slide 2 shrunk into the corner beside the enormous plan. Same reader, same skim."
+    text_overlay: "Nobody reviews a lump this size.\nThey skim it."
+    script:
+      - cue: "SLIDE 29 UP"
+      - line: "And what does anyone do with a lump that size? Skim it."
+      - parenthetical: "(point back at the opening PR)"
+      - line: "Which is the same skim as slide one, moved one step earlier and much better documented."
+      - line: "Attempt three drowned me in volume. This one got the volume right and the timing wrong: every decision arrives at one moment, instead of at the moments when I can actually make them."
+    applied_patterns:
+      - id: "master-story"
+        story_id: "five-processes"
+        beat: "recall-2"
+    callbacks:
+      - kind: "pay"
+        id: "the-rejected-pr"
+        variation: "The same skim, moved upstream"
+
+  - n: 30
+    chapter: "today"
+    title: "Attempt Five: What I Run Today"
+    format: "FULL"
+    visual: "Chapter card. Big numeral 5, this one not struck through."
+    text_overlay: |-
+      5 — What I run today
+      Claude Code · superpowers · beans
+      grill-with-docs + domain-modeling · github.com/mattpocock/skills
+    script:
+      - cue: "SLIDE 30 UP"
+      - line: "This is the one I still run."
+    callbacks:
+      - kind: "pay"
+        id: "four-dropped"
+        variation: "Four struck through, one left"
+
+  - n: 31
+    chapter: "today"
+    title: "The Stack, On One Repo"
+    format: "EXCEPTION"
+    format_justification: "The repo tree is the artifact — the process is legible in the directory listing, and a diagram of it would be a claim rather than evidence."
+    visual: "File tree of github.com/asm0dey/calit with the process files highlighted: CLAUDE.md, CONTEXT.md, docs/adr/, docs/superpowers/plans/, docs/superpowers/specs/, .beans/."
+    text_overlay: |-
+      Five tools. Five kinds of artifact.
+      All of it public: github.com/asm0dey/calit
+    placeholders: ["AUTHOR-08"]
+    script:
+      - cue: "SLIDE 31 UP"
+      - line: "Everything from here is one real repository. calit — a self-hosted Calendly alternative on Quarkus and Java 25, multi-user, Google Calendar sync. Public, so you can go read all of this after."
+      - line: "AUTHOR-08 — one sentence each: superpowers drives the work, grill-with-docs and domain-modeling interrogate me until the decisions are written down, beans holds the work items."
+      - line: "The names date fast, and the links are in the shownotes. What matters is the right-hand column: every one of those files exists because the process made me decide something, and then wrote down what I decided."
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["B"]
+
+  - n: 32
+    cuttable: true
+    cut_tier: 1
+    chapter: "today"
+    title: "A Plan and a Spec, Per Change"
+    format: "EXCEPTION"
+    format_justification: "The pair superpowers produces for one real change, quoted from the repo."
+    visual: "The design spec and the implementation plan for the same feature, side by side."
+    text_overlay: |-
+      A spec says what is wrong. A plan says what I will do.
+      Both name the work item they came from.
+    script:
+      - cue: "SLIDE 32 UP"
+      - line: "This is one change, as two documents. The spec states the problem in domain terms; the plan states the goal and the architecture."
+      - line: "Both of them carry the work item id, so a year from now the why is one grep away."
+
+  - n: 33
+    chapter: "today"
+    title: "It Asks Me Small Questions"
+    format: "EXCEPTION"
+    format_justification: "A real mid-work exchange from calit — the size and timing of the question is the argument, and paraphrasing it would remove exactly the evidence."
+    visual: "Real exchange from a calit session: one narrow decision put to me mid-work, my one-line answer, work continuing immediately after."
+    text_overlay: "One decision, at the moment it comes up"
+    script:
+      - cue: "SLIDE 33 UP"
+      - line: "It asks me one decision at a time, at the moment that decision comes up. Small enough that I actually read it."
+      - line: "That is the fix for attempt four: the same decisions, spread out."
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["B"]
+
+  - n: 34
+    chapter: "today"
+    title: "Buffers Are Constraints, Not Settings"
+    format: "EXCEPTION"
+    format_justification: "A real ADR from calit — the whole claim of the talk is that my reasoning ends up in a file, and only the actual file proves it."
+    visual: "docs/adr/0002-buffers-are-constraints-not-settings.md from https://github.com/asm0dey/calit on screen. Title line and the Consequences section visible."
+    text_overlay: "none"
+    script:
+      - cue: "SLIDE 34 UP"
+      - line: "Here is one of four decision records in that repo. Read the title: buffers are constraints, so the strictest one governs."
+      - parenthetical: "(let them read the title)"
+      - line: "That is a domain judgement, in my words, with the consequences I accepted written underneath it. No linter has an opinion about that sentence."
+      - line: "This is what attempt two was missing: the reasoning behind a decision, kept where the next session will read it."
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["A"]
+
+  - n: 35
+    chapter: "today"
+    title: "Including the Words I Refuse to Use"
+    format: "EXCEPTION"
+    format_justification: "CONTEXT.md's Avoid lists are the sharpest possible evidence that a preference — not a rule — got encoded verbatim."
+    visual: "CONTEXT.md open on the Owner and Invitee entries, with the _Avoid_ lines highlighted: user, admin, account, guest, booker, attendee, customer."
+    text_overlay: "Owner. Not user, not admin, not account."
+    script:
+      - cue: "SLIDE 35 UP"
+      - line: "And this one I like most, because it is pure preference. The glossary says what a thing is called, and then lists the words I have decided we never use for it."
+      - line: "Could anyone derive that from the code? No. It is a taste decision, it is mine, and now it survives every session without me repeating myself."
+      - line: "So when I read a diff now, the why is already sitting next to it: in a decision record, in a task file, or in the glossary."
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["A"]
+
+  - n: 36
+    cuttable: true
+    cut_tier: 1
+    chapter: "today"
+    title: "Ten Weeks, By the Numbers"
+    format: "EXCEPTION"
+    format_justification: "Volume is the point: this process produced more writing than attempt three, and I never stopped opening it."
+    visual: "Counts of every process artifact in calit, with the ten-week span."
+    text_overlay: |-
+      More writing than attempt three.
+      I never stopped opening it.
+    script:
+      - cue: "SLIDE 36 UP"
+      - line: "Look at the counts. Forty-nine plans, fourteen specs, thirty-three work items. That is far more prose than the twenty-two files that made me quit attempt three."
+      - line: "The difference is not volume. It is that each of these arrived when I needed it, and none of them asked me to read the others first."
+
+  - n: 37
+    chapter: "today"
+    title: "One Work Item, Its Tasks, Its PR"
+    format: "EXCEPTION"
+    format_justification: "The opening pull request traced back to the work items that produced it."
+    visual: "The beans chain for issue #116: the parent item, its numbered tasks, the follow-ups still open."
+    cuttable: false
+    text_overlay: |-
+      The PR from slide one, backwards.
+      One item, four tasks, two follow-ups still open.
+    script:
+      - cue: "SLIDE 37 UP"
+      - line: "This is the same pull request from the opening, seen from the other end. One work item, its numbered tasks, and the two follow-ups it spawned that are still open."
+      - line: "Nothing here was invented for the talk. This is what the tracker looked like on the day."
+
+  - n: 38
+    chapter: "today"
+    title: "This Is Attempt Five, Not the Answer"
+    format: "FULL"
+    visual: "The five tiles again, with an empty sixth tile outlined faintly at the end."
+    text_overlay: "There will be a sixth."
+    script:
+      - cue: "SLIDE 38 UP"
+      - line: "Two honest limits. This is one person's evidence — five processes, my work, my preferences. I am not claiming a study."
+      - line: "And the specific tools on the previous slides date fast. There will be a sixth attempt, and I will have to run the same test on it."
+      - line: "The stack will change again. I expect the test to outlive it."
+    applied_patterns:
+      - id: "inoculation"
+        resistance_vector: "vulnerabilities"
+
+  - n: 39
+    chapter: "coda"
+    title: "The Test"
+    format: "FULL"
+    visual: "The test as one question, alone on the slide, large."
+    text_overlay: "Does this process encode the decisions that are mine —\nor make them for me?"
+    thesis: "payoff"
+    script:
+      - cue: "SLIDE 39 UP"
+      - line: "So, the test I said we would come back to."
+      - parenthetical: "(let them read it)"
+      - line: "Encode, or replace. Two words, and they sorted every process I have tried."
+    callbacks:
+      - kind: "pay"
+        id: "the-test"
+        variation: "Stated in full"
+    applied_patterns:
+      - id: "walk-around"
+        registers: ["D"]
+
+  - n: 40
+    chapter: "coda"
+    title: "How Long Each One Lasted"
+    format: "EXCEPTION"
+    format_justification: "Five repos, five real spans — the master story's evidence in one table."
+    visual: "Five rows: repo, first and last commit, commit count, process files. The fifth row has no end date."
+    cuttable: false
+    text_overlay: |-
+      Four of them lasted a day.
+      The fifth is still open.
+    script:
+      - cue: "SLIDE 40 UP"
+      - line: "Here they are as git sees them. Attempt one, twenty-three commits in two days. Two, three and four: one to three commits, then nothing."
+      - line: "Attempt five: five hundred and fifty-four commits, ten weeks, still going. That is the whole claim, and it is the only measurement in this talk I did not have to argue for."
+
+  - n: 41
+    chapter: "coda"
+    title: "Run It on the Four"
+    format: "FULL"
+    visual: "The four dropped processes listed with their failure named beside each. Fourth line lands last."
+    text_overlay: "Takeaway — four failures, one shape:\nno artifact · rules without reasons · more than I would read · all at one gate"
+    progressive_lists:
+      - id: "failure-ledger"
+        item_index: 6
+    script:
+      - cue: "SLIDE 41 UP"
+      - line: "Vibe coding: no artifact, so nothing was encoded at all."
+      - line: "Guidelines: rules encoded, reasons left out. And reasons are where the decisions live."
+      - line: "Spec rigor: encoded everything, at a volume I stopped reading. Unread is unencoded."
+      - line: "The big-plan one: every decision surfaced, all at one gate, so I skimmed instead of deciding."
+      - line: "Different failures, same shape: each one took a decision out of my hands, or put it somewhere I would never pick it up."
+
+  - n: 42
+    chapter: "coda"
+    title: "Now Run It on Yours"
+    format: "FULL"
+    visual: "One instruction, and space beneath it. Nothing else on the slide."
+    text_overlay: "Open the process you used this morning.\nPoint at where your standards live in it."
+    applied_patterns:
+      - id: "call-to-action"
+        asks:
+          doer: "Open the AI process you used this morning and point at the file where your own decisions are written down. If you cannot point at one, that is the gap — create it before your next session."
+          supplier: "Put your team's decision record somewhere the assistant reads by default, not in a wiki page nobody opens."
+          influencer: "Next time you review AI-written code, ask the author where the decision was recorded. Make the question routine."
+          innovator: "Take a process you already run and change only the distribution — split its one big approval into decisions asked at the moment they come up."
+      - id: "walk-around"
+        registers: ["D"]
+    script:
+      - cue: "SLIDE 42 UP"
+      - line: "So: open whatever you used this morning and point at where your standards live in it."
+      - line: "If you cannot point at a file, they live in your head, and they are getting re-derived, badly, every session."
+      - line: "Next step, and it is a small one: on Monday, write down one decision you made for the assistant, with the reason, in a file it reads. One. That is the whole starting move."
+
+  - n: 43
+    chapter: "coda"
+    title: "Their Keyboard, Your Standards"
+    format: "EXCEPTION"
+    format_justification: "The opening PR screenshot returns as the bookend — it must be visibly the same artifact the talk started with."
+    visual: "The slide-1 PR screenshot again. This time the review annotations are answered: each one has a decision record beside it."
+    text_overlay: "Their keyboard, your standards."
+    script:
+      - cue: "SLIDE 32 UP — back to the opening PR"
+      - line: "Same pull request. Under a process that encodes, this is one I would have written — because every decision in it would have been mine, and written down."
+      - parenthetical: "(beat)"
+      - line: "It is their keyboard. The standards are still yours. Thank you."
+    applied_patterns:
+      - id: "master-story"
+        story_id: "five-processes"
+        beat: "recall-3"
+      - id: "new-bliss"
+    callbacks:
+      - kind: "pay"
+        id: "the-rejected-pr"
+        variation: "Answered — every objection has a decision record beside it"
+
+  - n: 44
+    chapter: "coda"
+    title: "Thanks"
+    format: "FULL"
+    visual: "Closing card. Handle and conference hashtag large enough to photograph from the back row. The test repeated in small type beneath, so the photo carries it."
+    text_overlay: "@asm0dey | #JRush | #AIcoding\n\nDoes it encode your decisions — or make them for you?"
+    script:
+      - cue: "SLIDE 44 UP"
+      - line: "That is me, that is the test, and there is time for questions."
+
