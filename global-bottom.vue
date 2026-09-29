@@ -11,7 +11,7 @@
   bottom: 0.9rem;
   font-size: 0.72rem;
   letter-spacing: 0.04em;
-  opacity: 0.42;
+  opacity: 0.6;
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
 }
 .deck-footer span { opacity: 0.5; margin: 0 0.3rem; }

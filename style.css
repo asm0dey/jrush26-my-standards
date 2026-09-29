@@ -10,6 +10,7 @@
 }
 .statement.small { font-size: 1.9rem; }
 .statement .vnote { display: none; }
+.statement .answer { font-size: 1.6rem; font-weight: 500; opacity: 0.85; margin-top: 2.2rem; }
 
 .chapter .numeral {
   font-size: 8rem;
@@ -19,12 +20,13 @@
   letter-spacing: -0.04em;
 }
 .chapter h1 { font-size: 2.4rem; margin-top: -1.2rem; }
+.chapter .gag { margin-top: 1.4rem; font-size: 1.5rem; font-style: italic; opacity: 0.85; }
 
 .artifact .eyebrow {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  opacity: 0.5;
+  opacity: 0.72;
   margin-bottom: 0.6rem;
 }
 .artifact .caption {
@@ -52,7 +54,7 @@
 .ph-tag { font-family: JetBrains Mono, ui-monospace, monospace; font-size: 0.95rem; font-weight: 700; }
 .ph-desc { font-size: 0.95rem; line-height: 1.45; max-width: 46rem; }
 
-.byline { margin-top: 2rem; font-size: 0.85rem; opacity: 0.55; }
+.byline { margin-top: 2rem; font-size: 0.85rem; opacity: 0.75; }
 
 .tiles .row { display: flex; gap: 1.4rem; justify-content: center; margin-bottom: 2rem; }
 .tiles .tile {
@@ -68,14 +70,20 @@
 
 .artifact .filepath {
   font-family: JetBrains Mono, ui-monospace, monospace;
-  font-size: 0.68rem;
-  opacity: 0.45;
+  font-size: 0.85rem;
+  opacity: 0.78;
   margin-bottom: 0.35rem;
 }
 .artifact .slidev-code { font-size: 0.72rem; line-height: 1.5; }
 
-.bio { font-size: 1.15rem; line-height: 1.6; opacity: 0.85; font-weight: 400; }
+.bio { font-size: 1.15rem; line-height: 1.6; font-weight: 400; }
 .bio .vnote { display: none; }
+.bio .who { font-size: 2.6rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
+.bio .ctx { font-size: 1rem; opacity: 0.75; margin-top: 0.4rem; }
+.bio .now { margin-top: 2.4rem; padding-left: 1.1rem; border-left: 3px solid currentColor; }
+.bio .now > div:first-child { opacity: 0.85; }
+.bio .repo { font-family: JetBrains Mono, ui-monospace, monospace; font-size: 1rem; margin-top: 0.3rem; }
+.bio .punch { font-size: 1.9rem; font-weight: 600; margin-top: 1rem; letter-spacing: -0.01em; }
 .artifact .slidev-code code { white-space: pre-wrap; }
 
 .artifact .shot {
@@ -100,7 +108,7 @@
 .artifact .claim .sub {
   font-size: 0.95rem;
   font-weight: 400;
-  opacity: 0.65;
+  opacity: 0.8;
   margin-top: 0.9rem;
 }
 /* Claim above a full-width artifact, for shots too dense to survive the 3fr column. */
@@ -111,7 +119,7 @@
   margin-bottom: 0.7rem;
 }
 .artifact .code.dense .slidev-code { font-size: 0.58rem; line-height: 1.35; }
-.artifact .filepath.dense { font-size: 0.6rem; }
+.artifact .filepath.dense { font-size: 0.75rem; }
 
 /* Artifact slides read claim-then-proof, so the proof column gets the width. */
 .slidev-layout.two-columns.grid-cols-2 { grid-template-columns: 2fr 3fr; }
@@ -133,7 +141,7 @@
 .chapter .toolref {
   font-family: JetBrains Mono, ui-monospace, monospace;
   font-size: 0.85rem;
-  opacity: 0.55;
+  opacity: 0.75;
   margin-top: 0.5rem;
 }
 .chapter .toolref:first-of-type { margin-top: 1.4rem; }
@@ -142,7 +150,8 @@
    posing as a verbatim <pre> artifact. */
 .artifact .spec {
   display: grid;
-  grid-template-columns: max-content max-content 1fr;
+  /* ponytail: middle column caps at 40rem so long descriptions wrap instead of pushing off-slide */
+  grid-template-columns: max-content fit-content(40rem) 1fr;
   gap: 0.42rem 1rem;
   font-size: 0.92rem;
   line-height: 1.45;
@@ -152,7 +161,7 @@
   font-size: 0.66rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  opacity: 0.5;
+  opacity: 0.72;
   white-space: nowrap;
   padding-top: 0.15rem;
 }
@@ -173,7 +182,7 @@
   font-size: 0.66rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  opacity: 0.38;
+  opacity: 0.62;
   margin-top: 0.5rem;
 }
 .artifact .spec .g:first-child { margin-top: 0; }
@@ -181,7 +190,7 @@
 /* URL column: quiet, and never the thing that wraps a row. */
 .artifact .spec .u {
   font-size: 0.7rem;
-  opacity: 0.55;
+  opacity: 0.75;
   white-space: nowrap;
   padding-left: 0.9rem;
   padding-top: 0.2rem;
@@ -197,4 +206,17 @@
   font-weight: 400;
 }
 .contacts .ct { display: flex; align-items: center; gap: 0.75rem; }
-.contacts .ct > span:first-child { width: 1.05em; height: 1.05em; opacity: 0.6; flex: none; }
+.contacts .ct > span:first-child { width: 1.05em; height: 1.05em; opacity: 0.8; flex: none; }
+
+/* Spec strip above an artifact: keep it from crowding the code below. */
+.precedent-spec { margin: 0.2rem 0 1rem; font-size: 0.85rem; }
+
+/* Takeaway: one row per dropped attempt, failure beside it. */
+.takeaway .tk-title { font-size: 2.2rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 1.6rem; }
+.takeaway .tk-rows { display: grid; gap: 0.9rem; }
+.takeaway .tk-row { display: grid; grid-template-columns: 1.6rem 15rem 1fr; gap: 1rem; align-items: baseline; font-size: 1.25rem; }
+.takeaway .tk-row .n { opacity: 0.6; font-weight: 700; }
+.takeaway .tk-row .a { font-weight: 600; }
+.takeaway .tk-row .a small { display: block; font-size: 0.8rem; font-weight: 400; opacity: 0.7; }
+.takeaway .tk-row .f { opacity: 0.85; }
+.takeaway .tk-shape { margin-top: 1.8rem; font-size: 1.6rem; font-weight: 600; }

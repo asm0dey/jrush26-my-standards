@@ -82,9 +82,15 @@ layout: center
 class: bio
 ---
 
-<div>Pasha Finkelshteyn · @asm0dey</div>
+<div class='who'>Pasha Finkelshteyn</div>
 
-<div>Ten-plus years in the JVM. Developer Advocate at BellSoft.</div>
+<div class='ctx'>@asm0dey · Developer Advocate at BellSoft · ten-plus years in the JVM</div>
+
+<div class='now'>
+<div>These days: production-like open source.</div>
+<div class='repo'><a href="https://github.com/asm0dey/calit">github.com/asm0dey/calit</a></div>
+<div class='punch'>No particular customer. Only users.</div>
+</div>
 
 
 <div class='vnote'>Name, handle, one line of context. Small type, no logo wall, no career timeline.</div>
@@ -95,6 +101,8 @@ class: bio
 Quickly, so you know whose taste you are about to hear about: ten-plus years in the JVM ecosystem, mostly Java and Kotlin, developer advocate at BellSoft.
 
 That decade is where my preferences come from, and it is the only reason any of this bothers me.
+
+These days I write production-like code again. calit is open source — a scheduling app with real users, not a demo. What it does not have is a particular customer. Nobody signs off on it but me, so the only standards in that repo are mine — which is exactly what makes it a fair test.
 -->
 
 ---
@@ -175,12 +183,20 @@ class: chapter
 
 # Vibe coding
 
+<div v-click class='gag'>“Build it. Make no mistakes.”</div>
+
 <!--
 **SLIDE 7 UP**
 
 The assistant was Junie. Same assistant as attempt two — the only thing that changes between them is the process, and here there is none: no spec, no plan, no guidelines file anywhere in the tree.
 
 Attempt one. Describe what I want, let it write, look at what came back.
+
+[click] The whole process fits on one line. You have all seen this prompt.
+
+*(let it land)*
+
+And it is a fine prompt, except it never says which mistakes. Those are exactly the decisions that are mine — and the prompt does not mention a single one.
 -->
 
 ---
@@ -387,7 +403,7 @@ It solved the task. Every rule in the file was respected. And I still did not wa
 
 Read the package name. Every file in that project is under com.github.com — the scaffold's placeholder, never renamed, and no guideline of mine said anything about package names.
 
-Guidelines encode rules. But the code I would have written comes out of a sequence of decisions, and most of those never take the shape of a rule.
+Guidelines write down rules. But the code I would have written comes out of a sequence of decisions, and most of those never take the shape of a rule.
 -->
 
 ---
@@ -441,7 +457,7 @@ class: artifact stack
 <div class='spec'>
 <div class='k'>what it is</div><div class='v'>Intent Integrity Kit — intent locked before code</div><div class='u'></div>
 <div class='k'>the artifacts</div><div class='v'>constitution, spec.md, plan.md, tasks.md, contracts/, checklists/, .feature files</div><div class='u'></div>
-<div class='k'>how it runs</div><div class='v'>constitution → specify → clarify → plan → checklist → testify → tasks → analyze → implement</div><div class='u'></div>
+<div class='k'>how it runs</div><div class='v'>constitution&nbsp;→ specify&nbsp;→ clarify&nbsp;→ plan&nbsp;→ checklist&nbsp;→ testify&nbsp;→ tasks&nbsp;→ analyze&nbsp;→ implement</div><div class='u'></div>
 <div class='k'>what it locks</div><div class='v'>the .feature files, hashed before implementation — the agent may rewrite code, never what passing means</div><div class='u'></div>
 <div class='k'>installed as</div><div class='v'>tessl-labs/intent-integrity-kit 2.1.0</div><div class='u'></div>
 <div class='k'>link</div><div class='v'><a href='https://github.com/intent-integrity-chain/kit'>github.com/intent-integrity-chain/kit</a></div><div class='u'></div>
@@ -613,7 +629,7 @@ layout: center
 class: statement
 ---
 
-<div>A process you abandon encodes nothing.</div>
+<div>A process you abandon remembers nothing.</div>
 
 
 <div class='vnote'>A usage line that starts high and decays to zero over a few weeks. No axis drama, just the shape.</div>
@@ -625,7 +641,7 @@ So what went wrong? Nothing, on paper. It was just heavy, and after a few weeks 
 
 *(beat)*
 
-A process you abandon encodes nothing. Whatever you still run on a Tuesday afternoon is its real ceiling.
+A process you abandon remembers nothing. Whatever you still run on a Tuesday afternoon is its real ceiling.
 -->
 
 ---
@@ -653,9 +669,9 @@ class: chapter
 
 # Plan everything, then approve it
 
-<div class='toolref'>ThinkRail · thinkrail.ai</div>
-
 <div class='toolref'>OpenSpec · github.com/Fission-AI/OpenSpec</div>
+
+<div class='toolref'>Claude via OpenRouter · openrouter.ai</div>
 
 <!--
 **SLIDE 24 UP**
@@ -668,21 +684,21 @@ layout: default
 class: artifact stack
 ---
 
-<div class='claim'><div>ThinkRail runs it. OpenSpec shapes it.</div><div class='sub'>Worktrees for free — and one proposal to approve.</div></div>
+<div class='claim'><div>OpenSpec shapes it. Claude runs it.</div><div class='sub'>One proposal to approve.</div></div>
 
 <div class='filepath'>attempt four — the two tools</div>
 
 <div class='spec'>
-<div class='k'>ThinkRail</div><div class='v'>worktree IDE for the pi agent, from JetBrains — one git worktree per workspace, by default. <a href='https://thinkrail.ai'>thinkrail.ai</a></div><div class='u'></div>
-<div class='k'>OpenSpec</div><div class='v'>the spec format it drives — one change proposal plus delta specs, approved as a single unit. <a href='https://github.com/Fission-AI/OpenSpec'>github.com/Fission-AI/OpenSpec</a></div><div class='u'></div>
+<div class='k'>OpenSpec</div><div class='v'>the spec format — one change proposal plus delta specs, approved as a single unit.</div><div class='u'><a href='https://github.com/Fission-AI/OpenSpec'>github.com/Fission-AI/OpenSpec</a></div>
+<div class='k'>Claude</div><div class='v'>the agent that drives it, through OpenRouter.</div><div class='u'><a href='https://openrouter.ai'>openrouter.ai</a></div>
 </div>
 
 <!--
 **SLIDE 25 UP**
 
-ThinkRail is a worktree IDE for the pi agent, out of JetBrains. Every workspace is its own git worktree, without asking.
+OpenSpec is a spec format: one change proposal plus the deltas it makes to the specs, approved as a single unit. Hold onto that last part.
 
-OpenSpec is the spec format underneath: one change proposal plus the deltas it makes to the specs, approved as a single unit. Hold onto that last part.
+Claude drives it, through OpenRouter.
 -->
 
 ---
@@ -690,17 +706,33 @@ layout: two-cols
 class: artifact
 ---
 
-<div class='claim'><div>Worktrees by default</div></div>
+<div class='claim'><div>Credit where it is due</div><div class='sub'>A worktree per change. And an archive I still miss.</div></div>
 
 ::right::
 
-<div class='filepath'>calit — git worktree list</div>
+<div class='filepath'>spring-git-mcp/openspec — after ten changes</div>
 
 <div class='code'>
 
-```text 
-/home/finkel/work_self/calit                                                                                   64be9dc [main]
-/home/finkel/.thinkrail/worktrees/calit/workspace-1                                                            2cd3893 [dispatch-project-spec-setup]
+```text {1-6|8-18}
+specs/                    what is true now
+  git-bisect/
+  git-interactive-rebase/
+  git-log/
+  git-reflog/
+  tool-service-marker-interface/
+
+changes/archive/          how it got that way
+  2026-03-24-add-git-bisect-tool/
+  2026-03-24-add-reflog-support/
+  2026-03-24-tool-services-marker-interface/
+  2026-03-25-extend-reflog-reset-limit/
+  2026-03-25-git-interactive-rebase-tool/
+  2026-03-25-git-log-tool/
+  2026-03-27-git-log-custom-fields/
+  2026-04-17-bisect-actionable-response/
+  2026-04-17-bisect-labels-based-state/
+  2026-04-17-fix-git-bisect-review-findings/
 ```
 
 </div>
@@ -708,7 +740,13 @@ class: artifact
 <!--
 **SLIDE 26 UP**
 
-It got real things right. Worktrees by default, so parallel work stopped colliding. I did not have to ask for that.
+It got real things right. OpenSpec gave every change its own git worktree, so parallel work stopped colliding. I did not have to ask for that.
+
+And the archive. When a change ships, its spec deltas merge into the living specs. So specs always say what is true now.
+
+[click] And the proposal, design and tasks move into a dated folder. The archive says how it got that way.
+
+What I run today keeps the decisions — decision records in the repo, precedent across all of them. What it does not have is that fold. calit has nineteen specs and sixty-four plans in two flat folders, and nothing merges them into what is true now. That is the one thing I still miss.
 
 I dropped it anyway, over one structural choice.
 -->
@@ -722,7 +760,7 @@ class: artifact
 
 ::right::
 
-<div class='filepath'>spring-git-mcp/openspec/changes/git-log-custom-fields/proposal.md — 1 of 4 documents</div>
+<div class='filepath'>openspec/changes/git-log-custom-fields/proposal.md — 1 of 4</div>
 
 <div class='code'>
 
@@ -762,7 +800,7 @@ class: artifact
 
 ::right::
 
-<div class='filepath'>spring-git-mcp/openspec/changes/git-log-custom-fields — the whole approval</div>
+<div class='filepath'>openspec/changes/git-log-custom-fields — the whole approval</div>
 
 <div class='code'>
 
@@ -821,9 +859,11 @@ class: chapter
 
 # What I run today
 
-<div class='toolref'>Claude Code · superpowers · beans</div>
+<div class='toolref'>Claude Code · superpowers · beans · ponytail</div>
 
 <div class='toolref'>grill-with-docs + domain-modeling · github.com/mattpocock/skills</div>
+
+<div class='toolref'>precedent · github.com/asm0dey/precedent</div>
 
 <!--
 **SLIDE 30 UP**
@@ -836,16 +876,17 @@ layout: default
 class: artifact stack
 ---
 
-<div class='claim'><div>Five tools. I write none of it.</div><div class='sub'>All of it public: github.com/asm0dey/calit</div></div>
+<div class='claim'><div>Six tools. I write none of it.</div><div class='sub'>All of it public: github.com/asm0dey/calit</div></div>
 
 <div class='filepath'>github.com/asm0dey/calit — in Claude Code, I talk to</div>
 
 <div class='spec'>
-<div class='k'>superpowers</div><div class='v'>pulls the idea apart, then turns it into a plan</div><div class='u'><a href='https://github.com/obra/superpowers'>github.com/obra/superpowers</a></div>
-<div class='k'>grill-with-docs</div><div class='v'>questions me until we mean the same thing</div><div class='u'><a href='https://github.com/mattpocock/skills'>github.com/mattpocock/skills</a></div>
+<div class='k'>superpowers</div><div class='v'>plans the work, then sizes a subagent to each task</div><div class='u'><a href='https://github.com/obra/superpowers'>github.com/obra/superpowers</a></div>
+<div class='k'>grill-with-docs</div><div class='v'>questions me until we agree, then writes the ADR</div><div class='u'><a href='https://github.com/mattpocock/skills'>github.com/mattpocock/skills</a></div>
 <div class='k'>domain-modeling</div><div class='v'>argues with my words, then records them</div><div class='u'><a href='https://github.com/mattpocock/skills'>github.com/mattpocock/skills</a></div>
 <div class='k'>ponytail</div><div class='v'>keeps what gets written small</div><div class='u'><a href='https://github.com/DietrichGebert/ponytail'>github.com/DietrichGebert/ponytail</a></div>
 <div class='k'>beans</div><div class='v'>keeps the work list out of my head</div><div class='u'><a href='https://github.com/hmans/beans'>github.com/hmans/beans</a></div>
+<div class='k'>precedent</div><div class='v'>a local graph of what I decided, across every repo</div><div class='u'><a href='https://github.com/asm0dey/precedent'>github.com/asm0dey/precedent</a></div>
 </div>
 
 <!--
@@ -855,13 +896,13 @@ Everything from here is one real repository. calit — a self-hosted Calendly al
 
 I do not write any of this. I talk to it. brainstorming pulls the idea apart before there is a plan, writing-plans turns what we agreed into one, and grill-with-docs keeps asking until we mean the same thing.
 
-domain-modeling argues with my vocabulary and records what we settle on. ponytail keeps what gets written as small as it can be. beans keeps the work list out of my head.
+domain-modeling argues with my vocabulary and records what we settle on. ponytail keeps what gets written as small as it can be. beans keeps the work list out of my head. And precedent — the one I did build, with this same process — remembers what I decided, across every repo.
 
 Then I read the spec, and I read the code. Usually not the plan. The plan is written for the agent — longer, and full of detail it needs and I do not. The spec is the part addressed to me.
 
 The names will date. The shape will not: every one of these makes me decide something before it writes anything down.
 
-And the repository is open. If you want to see what ten weeks of this actually looks like, or you have opinions about scheduling software, issues and pull requests are welcome.
+And the repository is open. If you want to see what sixteen weeks of this actually looks like, or you have opinions about scheduling software, issues and pull requests are welcome.
 -->
 
 ---
@@ -869,7 +910,7 @@ layout: default
 class: artifact stack
 ---
 
-<div class='claim'><div>The spec is written for me. The plan is written for the agent.</div><div class='sub'>Both name the work item they came from.</div></div>
+<div class='claim'><div class='eyebrow'>superpowers · brainstorming + writing-plans</div><div>The spec is written for me. The plan is written for the agent.</div><div class='sub'>Both name the work item they came from.</div></div>
 
 <div class='filepath'>calit/docs/superpowers — one change, two documents</div>
 
@@ -889,6 +930,8 @@ This is one change, as two documents, and they have different readers. The spec 
 
 The plan is longer and more detailed, because it is written for the agent. Most of the time I do not read it, and that is the point: the layer that needs my judgement is separated from the layer that does not.
 
+That detail pays twice. superpowers hands every task in the plan to its own subagent, and picks the model per task: Haiku when the plan already spells out the code, Sonnet for integration and debugging, Opus for design and the final review of the whole branch. The more precise the plan, the cheaper the model that can carry it.
+
 Both of them carry the work item id, so a year from now the why is one grep away.
 -->
 
@@ -897,22 +940,25 @@ layout: two-cols
 class: artifact
 ---
 
-<div class='claim'><div>One decision, at the moment it comes up</div></div>
+<div class='claim'><div class='eyebrow'>superpowers</div><div>One decision, at the moment it comes up</div></div>
 
 ::right::
 
-<div class='filepath'>three real questions from calit sessions, verbatim</div>
+<div class='filepath'>three real calit questions, verbatim — and which step asked</div>
 
 <div class='code'>
 
-```text 
-When calit can't read your Google calendar (token revoked), what should
-the public booking page show?
+```text
+# writing-plans · while planning the Google-disconnect fix
+When calit can't read your Google calendar (disconnected/token revoked),
+what should the public booking page show?
   → Fail-closed (recommended)   ·   Notify-only
 
+# finishing-a-development-branch · right after the merge
 How should the booking window be determined?
   → Use type.horizonDays   ·   Bump the constant   ·   Leave as-is
 
+# finishing-a-development-branch · when the PR's quality gate failed
 Sonar's duplication + too-many-params failures are the flat-param design
 you approved. How do you want to resolve them?
   → Suppress, keep flat params   ·   Adopt a shared view record
@@ -925,6 +971,8 @@ you approved. How do you want to resolve them?
 
 It asks me one decision at a time, at the moment that decision comes up. Small enough that I actually read it.
 
+And it is not one gate. The first question came from superpowers while it was still writing the plan. The other two came at the very end, while it was finishing the branch: one right after the merge, one when the pull request's quality gate went red. Planning asks, and finishing asks again.
+
 That is the fix for attempt four: the same decisions, spread out.
 -->
 
@@ -932,6 +980,8 @@ That is the fix for attempt four: the same decisions, spread out.
 layout: default
 class: artifact
 ---
+
+<div class='eyebrow'>grill-with-docs</div>
 
 <div class='filepath'>calit/docs/adr/0002-buffers-are-constraints-not-settings.md</div>
 
@@ -953,7 +1003,7 @@ of them, never the most specific one.
 <!--
 **SLIDE 34 UP**
 
-Here is one of four decision records in that repo. Read the title: buffers are constraints, so the strictest one governs.
+Here is one of eleven decision records in that repo. Read the title: buffers are constraints, so the strictest one governs.
 
 *(let them read the title)*
 
@@ -967,7 +1017,7 @@ layout: two-cols
 class: artifact
 ---
 
-<div class='claim'><div>Owner. Not user, not admin, not account.</div></div>
+<div class='claim'><div class='eyebrow'>grill-with-docs + domain-modeling</div><div>Owner. Not user, not admin, not account.</div></div>
 
 ::right::
 
@@ -1006,6 +1056,54 @@ So when I read a diff now, the why is already sitting next to it: in a decision 
 -->
 
 ---
+layout: default
+class: artifact stack
+---
+
+<div class='claim'><div class='eyebrow'>precedent</div><div>It remembers what I decided.</div><div class='sub'>Including where I decided otherwise.</div></div>
+
+<div class='spec precedent-spec'>
+<div class='k'>what it is</div><div class='v'>a skill with a local graph database of my decisions — technical, business, process — each with its why and what I rejected</div><div class='u'><a href='https://github.com/asm0dey/precedent'>github.com/asm0dey/precedent</a></div>
+<div class='k'>what it does</div><div class='v'>query before choosing · override per project · regret, and it stops counting</div><div class='u'></div>
+</div>
+
+<div class='filepath'>precedent check --topic encryption — excerpt, from the calit session</div>
+
+<div class='code'>
+
+```text
+PRINCIPLE     Encrypt secrets and PII at rest with Google Tink. Never hand-roll an AES-GCM helper.
+              calit's EncryptedStringConverter predates this and is a known, regretted divergence.
+
+calit         stays on EncryptedStringConverter despite the Tink principle
+   rejected   migrate calit to Tink now · run Tink and the converter side by side
+   why        A second at-rest crypto stack in the same app is worse than the wrong single one:
+              two key env vars, two rotation stories, and a reader that must guess which scheme
+              a row uses. Recorded so the graph stops proposing Tink for calit specifically
+              while still proposing it everywhere else.
+
+exchange-bot  App-level encryption with Tink, identifiers as keyed hashes
+```
+
+</div>
+
+<!--
+**SLIDE 36 UP**
+
+Decision records and a glossary live in one repo. My preferences do not. So the last tool is one I built — with this same process — and it keeps what I decided across every project.
+
+It is a skill with a small local graph database behind it. Technical decisions, business ones, process ones — each with the why and the options I rejected. Before a choice, the agent queries it. When a project needs to break the rule, I record an override for that project only. And when a choice turns out wrong, I regret it, and it stops counting as precedent everywhere.
+
+Here is the rule: secrets at rest go through Tink. And here is calit, breaking it on purpose. Migrating means re-encrypting every token in a live deployment, and two crypto stacks in one app is worse than the wrong single one.
+
+*(let them read the "why")*
+
+It did not decide that. It asked, I answered, and it wrote down my answer — including the exception. Next project, it proposes Tink again. In calit, it stops nagging.
+
+My decision, and it remembers it. That is the whole test.
+-->
+
+---
 layout: two-cols
 class: artifact
 ---
@@ -1014,27 +1112,27 @@ class: artifact
 
 ::right::
 
-<div class='filepath'>calit — every process artifact, ten weeks in</div>
+<div class='filepath'>calit — every process artifact, sixteen weeks in</div>
 
 <div class='code'>
 
 ```text 
-ten weeks, one repo, still running
+sixteen weeks, one repo, still running
 
-554   commits
- 49   plans          docs/superpowers/plans/
- 14   specs          docs/superpowers/specs/
- 33   work items     .beans/        21 done, 11 open, 1 scrapped
-  4   decision records  docs/adr/
-  1   glossary       CONTEXT.md
+830   commits
+ 64   plans             docs/superpowers/plans/
+ 19   specs             docs/superpowers/specs/
+138   work items        .beans/     107 done, 28 open, 3 scrapped
+ 11   decision records  docs/adr/
+  1   glossary          CONTEXT.md
 ```
 
 </div>
 
 <!--
-**SLIDE 36 UP**
+**SLIDE 37 UP**
 
-Look at the counts. Forty-nine plans, fourteen specs, thirty-three work items. That is far more prose than the twenty-two files that made me quit attempt three.
+Look at the counts. Sixty-four plans, nineteen specs, a hundred and thirty-eight work items. That is far more prose than the twenty-two files that made me quit attempt three.
 
 The difference is not volume. It is that each of these arrived when I needed it, and none of them asked me to read the others first.
 -->
@@ -1044,7 +1142,7 @@ layout: two-cols
 class: artifact
 ---
 
-<div class='claim'><div>The PR from slide one, backwards.</div><div class='sub'>One item, four tasks, two follow-ups still open.</div></div>
+<div class='claim'><div class='eyebrow'>beans</div><div>The PR from slide one, backwards.</div><div class='sub'>It is why the stack looks like this.</div></div>
 
 ::right::
 
@@ -1052,26 +1150,34 @@ class: artifact
 
 <div class='code'>
 
-```text 
+```text {1-9|11-13}
 calit-0hyn  completed  Issue #116: 24h/locale-correct time format
                        on booking page
 calit-184b  completed    Task 3: Persist host's 12h/24h preference
 calit-wk3r  completed    Task 4: Settings UI for the preference
 calit-syal  completed  Fix no-JS admin fallback + label wording
-calit-4whp  todo       Validate OwnerSettings.timezone on save
-calit-mhgs  todo       /me pages disagree on which timezone they show
+calit-4whp  completed  Validate OwnerSettings.timezone on save
+calit-mhgs  completed  /me pages disagree on which timezone they show
 
 closed by pull request #122 — the one from slide one
+
+2026-08-16  #122 merged       superpowers + beans, nothing else
+2026-08-17  glossary + ADRs   grill-with-docs, first run
+2026-09-12  precedent         decisions across every repo
 ```
 
 </div>
 
 <!--
-**SLIDE 37 UP**
+**SLIDE 38 UP**
 
-This is the same pull request from the opening, seen from the other end. One work item, its numbered tasks, and the two follow-ups it spawned that are still open.
+This is the same pull request from the opening, seen from the other end. One work item, its numbered tasks, and the two follow-ups it spawned. Both are closed now. The first one — validate the timezone on save — is the fix for the bug from slide one.
 
-Nothing here was invented for the talk. This is what the tracker looked like on the day.
+[click] Attempt five did not start finished. The day I merged this, it was superpowers and beans, and nothing else. Nothing in it could hold a decision, so the rule about trusting input lived in my head — and I skimmed right past it.
+
+The next day, grill-with-docs ran for the first time: a glossary and decision records. A month later, precedent. Most of what I just showed you grew out of this one pull request.
+
+Nothing here was invented for the talk. The dates are in the git log.
 -->
 
 ---
@@ -1085,7 +1191,7 @@ class: statement
 <div class='vnote'>The five tiles again, with an empty sixth tile outlined faintly at the end.</div>
 
 <!--
-**SLIDE 38 UP**
+**SLIDE 39 UP**
 
 Two honest limits. This is one person's evidence — five processes, my work, my preferences. I am not claiming a study.
 
@@ -1099,21 +1205,25 @@ layout: center
 class: statement
 ---
 
-<div>Does this process encode the decisions that are mine —</div>
+<div>Who made this decision —</div>
 
-<div>or make them for me?</div>
+<div>me, or the process?</div>
+
+<div v-click class='answer'>It should be me. A good process asks me, then writes my answer down.</div>
 
 
 <div class='vnote'>The test as one question, alone on the slide, large.</div>
 
 <!--
-**SLIDE 39 UP**
+**SLIDE 40 UP**
 
 So, the test I said we would come back to.
 
 *(let them read it)*
 
-Encode, or replace. Two words, and they sorted every process I have tried.
+[click] It should be me. The process I kept asks me at the moment a decision comes up, then writes my answer down, so nobody has to guess it again.
+
+Every process I dropped got that backwards. It decided for me — or it handed me every decision at once, and I skimmed, which comes to the same thing.
 -->
 
 ---
@@ -1127,52 +1237,56 @@ class: artifact
 
 <div class='filepath'>git log across the five repositories</div>
 
-<div class='code'>
+<div class='code dense'>
 
 ```text 
                     first        last      commits   process files
 
 1  diskinventory    2026-08-10   +1 day        23    none
-2  fb2ebup          2025-11-09   same day       1    .junie/guidelines.md
+2  fb2ebup          2025-11-09   same day       1    1, under .junie/
 3  femtocli         2026-02-23   +1 day         3    22, under specs/
 4  spring-git-mcp   2026-03-28   +26 days       2    60, under openspec/
-5  calit            2026-06-08   still open   554    growing every week
+5  calit            2026-06-08   still open   830    growing every week
 ```
 
 </div>
 
 <!--
-**SLIDE 40 UP**
+**SLIDE 41 UP**
 
 Here they are as git sees them. Attempt one, twenty-three commits in two days. Two, three and four: one to three commits, then nothing.
 
-Attempt five: five hundred and fifty-four commits, ten weeks, still going. That is the whole claim, and it is the only measurement in this talk I did not have to argue for.
+Attempt five: eight hundred and thirty commits, sixteen weeks, still going. That is the whole claim, and it is the only measurement in this talk I did not have to argue for.
 -->
 
 ---
 layout: center
-class: statement small
+class: takeaway
 ---
 
-<div>Takeaway — four failures, one shape:</div>
+<div class='tk-title'>Four failures, one shape</div>
 
-<div>no artifact · rules without reasons · more than I would read · all at one gate</div>
+<div class='tk-rows'>
+<div v-click class='tk-row'><span class='n'>1</span><span class='a'>Junie, no process<small>vibe coding</small></span><span class='f'>nothing written down — the model made every call</span></div>
+<div v-click class='tk-row'><span class='n'>2</span><span class='a'>Junie + guidelines.md<small>guidelines first</small></span><span class='f'>rules written down, reasons left out</span></div>
+<div v-click class='tk-row'><span class='n'>3</span><span class='a'>Intent Integrity Kit<small>specify first</small></span><span class='f'>everything written down — more than I would read</span></div>
+<div v-click class='tk-row'><span class='n'>4</span><span class='a'>OpenSpec + Claude<small>plan, then approve</small></span><span class='f'>every decision at once, at one gate — so I skimmed</span></div>
+</div>
 
-
-<div class='vnote'>The four dropped processes listed with their failure named beside each. Fourth line lands last.</div>
+<div v-click class='tk-shape'>Each one took a decision out of my hands.</div>
 
 <!--
-**SLIDE 41 UP**
+**SLIDE 42 UP**
 
-Vibe coding: no artifact, so nothing was encoded at all.
+[click] Vibe coding: nothing written down, so the model made every decision.
 
-Guidelines: rules encoded, reasons left out. And reasons are where the decisions live.
+[click] Guidelines: rules written down, reasons left out. And reasons are where the decisions live.
 
-Spec rigor: encoded everything, at a volume I stopped reading. Unread is unencoded.
+[click] Spec rigor: wrote everything down, at a volume I stopped reading. What I do not read, I did not decide.
 
-The big-plan one: every decision surfaced, all at one gate, so I skimmed instead of deciding.
+[click] The big-plan one: every decision surfaced, all at one gate, so I skimmed instead of deciding.
 
-Different failures, same shape: each one took a decision out of my hands, or put it somewhere I would never pick it up.
+[click] Different failures, same shape: each one took a decision out of my hands, or put it somewhere I would never pick it up.
 -->
 
 ---
@@ -1188,7 +1302,7 @@ class: statement
 <div class='vnote'>One instruction, and space beneath it. Nothing else on the slide.</div>
 
 <!--
-**SLIDE 42 UP**
+**SLIDE 43 UP**
 
 So: open whatever you used this morning and point at where your standards live in it.
 
@@ -1211,9 +1325,9 @@ class: artifact
 <img class='shot' src='/pr-122.png' alt='the same pull request'>
 
 <!--
-**SLIDE 43 UP — back to the opening PR**
+**SLIDE 44 UP — back to the opening PR**
 
-Same pull request. Under a process that encodes, this is one I would have written — because every decision in it would have been mine, and written down.
+Same pull request. Under a process that asks me and writes it down, this is one I would have written — because every decision in it would have been mine.
 
 *(beat)*
 
@@ -1225,7 +1339,7 @@ layout: center
 class: statement
 ---
 
-<div>Does it encode your decisions — or make them for you?</div>
+<div>Who made this decision&nbsp;—<br>you, or the process?</div>
 
 
 <div class='contacts'>
@@ -1239,7 +1353,7 @@ class: statement
 <div class='vnote'>Closing card. Contacts and conference hashtag large enough to photograph from the back row. The test repeated beneath, so the photo carries it.</div>
 
 <!--
-**SLIDE 44 UP**
+**SLIDE 45 UP**
 
 That is me, that is the test, and there is time for questions. Everything is on that site, and calit is a link away from it.
 -->
