@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "slidev jrush26-my-standards.md --open",
     "build": "slidev build jrush26-my-standards.md",
-    "export": "slidev export jrush26-my-standards.md"
+    "export": "slidev export jrush26-my-standards.md",
+    "build-gha": "slidev build jrush26-my-standards.md --base /jrush26-my-standards/",
+    "export-pdf": "slidev export jrush26-my-standards.md --with-clicks --format pdf --output dist/index.pdf"
   },
   "devDependencies": {
     "@slidev/cli": "^53.0.0",
