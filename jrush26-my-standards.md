@@ -32,27 +32,29 @@ Nothing broke. There is no incident story at the end of this.
 -->
 
 ---
-layout: two-cols
 class: artifact
 ---
 
-<div class='claim'><div>I would have rejected this</div></div>
+<div class='claim full'><div>I would have rejected this</div></div>
 
-::right::
+<div class='filepath'>the same pull request — the review I would have left</div>
 
-<div class="ph">
-<div class="ph-tag">SCREENSHOT-02, AUTHOR-02</div>
-<div class="ph-desc">The same PR screenshot, now covered in the review comments I would have written if it had come from anyone else. Red margin notes.</div>
-</div>
+<img class='shot' src='/pr-122-annotated.png' alt='the same pull request, annotated with the review comments I would have written'>
 
 <!--
 **SLIDE 1 UP — same screenshot, annotated**
 
 A week later I read it properly. These are the comments I would have left if this had come from anyone on my team.
 
-AUTHOR-02 — name two or three of the actual objections. None of them are bugs. All of them are choices.
+Two thousand nine hundred lines. Thirty-five files. One comment on the whole thing, and it was mine.
 
-*(beat — let them read one of the annotations)*
+And then this. Three assignments, next to each other, in the same method. The locale is validated. The time format is validated. The timezone is taken straight off the form.
+
+That is not a bug. The dropdown can only submit a real zone, so nothing was broken the day I merged it. It is three lines that disagree with each other about whether input is trustworthy — and that is a choice, not a defect.
+
+*(beat — let them read the annotation)*
+
+Six days later it was a bug: a crafted POST parks a junk zone, and eleven call sites throw a DateTimeException. One of them is the public booking page.
 
 I approved code I would have sent back. So whose fault is that? Not the model's, and that is the uncomfortable part.
 -->

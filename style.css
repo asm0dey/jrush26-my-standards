@@ -103,6 +103,13 @@
   opacity: 0.65;
   margin-top: 0.9rem;
 }
+/* Claim above a full-width artifact, for shots too dense to survive the 3fr column. */
+.artifact .claim.full {
+  height: auto;
+  display: block;
+  padding-right: 0;
+  margin-bottom: 0.7rem;
+}
 .artifact .code.dense .slidev-code { font-size: 0.58rem; line-height: 1.35; }
 .artifact .filepath.dense { font-size: 0.6rem; }
 
