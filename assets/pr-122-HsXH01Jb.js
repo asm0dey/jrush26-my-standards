@@ -1,0 +1,1 @@
+var e=`/jrush26-my-standards/pr-122.png`;export{e as t};

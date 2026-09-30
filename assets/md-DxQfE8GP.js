@@ -1,0 +1,13 @@
+import{A as e,E as t,Et as n,K as r,P as i,T as a,at as o,k as s,wt as c}from"./modules/shiki-1wnpChBq.js";import{nt as l,rt as u}from"./index-6OEbZ6Yd.js";import{t as d}from"./slidev/CodeBlockWrapper-D103WNFT.js";import{t as f}from"./slidev/two-cols-n_6zdAJm.js";var p={class:`code`},m={__name:`jrush26-my-standards.md__slidev_39`,setup(m){let{$slidev:h,$nav:g,$clicksContext:_,$clicks:v,$page:y,$renderContext:b,$frontmatter:x}=u();return _.setup(),(u,m)=>{let h=d;return r(),t(f,n(i(c(l)(c(x),38))),{right:o(t=>[m[1]||=a(`div`,{class:`filepath`},`calit/.beans — the chain behind pull request`,-1),a(`div`,p,[e(h,{title:``,ranges:[`1-9`,`11-13`]},{default:o(()=>[...m[0]||=[a(`pre`,{class:`shiki shiki-themes vitesse-dark vitesse-light slidev-code`,style:{"--shiki-dark":`#dbd7caee`,"--shiki-light":`#393a34`,"--shiki-dark-bg":`#121212`,"--shiki-light-bg":`#ffffff`}},[a(`code`,{class:`language-text`},[a(`span`,{class:`line`},[a(`span`,null,`calit-0hyn  completed  Issue #116: 24h/locale-correct time format`)]),s(`
+`),a(`span`,{class:`line`},[a(`span`,null,`                       on booking page`)]),s(`
+`),a(`span`,{class:`line`},[a(`span`,null,`calit-184b  completed    Task 3: Persist host's 12h/24h preference`)]),s(`
+`),a(`span`,{class:`line`},[a(`span`,null,`calit-wk3r  completed    Task 4: Settings UI for the preference`)]),s(`
+`),a(`span`,{class:`line`},[a(`span`,null,`calit-syal  completed  Fix no-JS admin fallback + label wording`)]),s(`
+`),a(`span`,{class:`line`},[a(`span`,null,`calit-4whp  completed  Validate OwnerSettings.timezone on save`)]),s(`
+`),a(`span`,{class:`line`},[a(`span`,null,`calit-mhgs  completed  /me pages disagree on which timezone they show`)]),s(`
+`),a(`span`,{class:`line`},[a(`span`)]),s(`
+`),a(`span`,{class:`line`},[a(`span`,null,`closed by pull request #122 — the one from slide one`)]),s(`
+`),a(`span`,{class:`line`},[a(`span`)]),s(`
+`),a(`span`,{class:`line`},[a(`span`,null,`2026-08-16  #122 merged       superpowers + beans, nothing else`)]),s(`
+`),a(`span`,{class:`line`},[a(`span`,null,`2026-08-17  glossary + ADRs   grill-with-docs, first run`)]),s(`
+`),a(`span`,{class:`line`},[a(`span`,null,`2026-09-12  precedent         decisions across every repo`)])])],-1)]]),_:1})])]),default:o(()=>[m[2]||=a(`div`,{class:`claim`},[a(`div`,{class:`eyebrow`},`beans`),a(`div`,null,`The PR from slide one, backwards.`),a(`div`,{class:`sub`},`It is why the stack looks like this.`)],-1)]),_:1},16)}}};export{m as default};
